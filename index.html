@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signos e Sorte</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>    
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("https://www.jdv.com.br/wp-content/uploads/2023/03/horoscopo-previsao-signos-4-a-10-de-julho_0-824x430.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 200px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: rgba(93, 85, 141, 0.9);
+      border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    .sidebar-link {
+      width: 90%;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      border: 2px solid #fff;
+      padding: 8px 20px;
+      text-align: center;
+    }
+
+    .sidebar-link:hover {
+      background-color: #663399;
+      transform: translateX(5px);
+    }
+
+    .generate-button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 40px;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px auto;
+      cursor: pointer;
+      display: block;
+      width: 300px;
+      padding: 8px 20px;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .generate-button:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+
+    .content-container {
+      max-width: 800px;
+      background-color: rgba(93, 85, 141, 0.9);
+      border-radius: 40px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      padding: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .message-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      font-size: 30px;
+      font-weight: bold;
+      opacity: 50;
+      transform: translateY(-20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      text-align: center;
+    }
+
+    .single-message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .show-animation {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .sidebar-right {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 200px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: rgba(93, 85, 141, 0.9);
+      border-top-left-radius: 40px;
+      border-bottom-left-radius: 40px;
+    }
+
+    .sidebar-right-header {
+      font-family: 'Pacifico', cursive;
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-right-text {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .sidebar-right input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .verify-button {
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      border-radius: 40px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      display: block;
+      width: 90%;
+      padding: 8px 20px;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .verify-button:hover {
+      background-color: #c74d37;
+      transform: scale(1.05);
+    }
+
+    .balloon {
+      position: center;
+      background-color: #87319c;
+      color: #fff;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 20px;
+      bottom: 80px;
+      right: 80px;
+      opacity: 50;
+      transform: translateX(300px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .balloon.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .game-button, .credits-button, .about-button {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      border: 2px solid #fff;
+      padding: 8px 20px;
+      text-align: center;
+      width: 90%;
+    }
+
+    .game-button:hover, .credits-button:hover, .about-button:hover {
+      background-color: #663399;
+      transform: translateX(5px);
+    }
+
+    .game-button {
+      background-color: #3498db;
+    }
+
+    .credits-button {
+      background-color: #e74c3c;
+    }
+
+    .about-button {
+      background-color: #27ae60;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(241, 241, 241, 0.5);
+      color: #000;
+      border-radius: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h7>SIGNOS</h7>
+      <a href="aries.html" class="sidebar-link" style="background-color: #e74c3c;">Áries</a>
+      <br>
+      <a href="touro.html" class="sidebar-link" style="background-color: #f39c12;">Touro</a>
+      <br>
+      <a href="Gemeos.html" class="sidebar-link" style="background-color: #d35400;">Gêmeos</a>
+      <br>
+      <a href="Cancer.html" class="sidebar-link" style="background-color: #c0392b;">Câncer</a>
+      <br>
+      <a href="Leo.html" class="sidebar-link" style="background-color: #27ae60;">Leão</a>
+      <br>
+      <a href="virgem.html" class="sidebar-link" style="background-color: #2ecc71;">Virgem</a>
+      <br>
+      <a href="Libra.html" class="sidebar-link" style="background-color: #3498db;">Libra</a>
+      <br>
+      <a href="Escorpiao.html" class="sidebar-link" style="background-color: #9b59b6;">Escorpião</a>
+      <br>
+      <a href="Sagitario.html" class="sidebar-link" style="background-color: #8e44ad;">Sagitário</a>
+      <br>
+      <a href="Capricornio.html" class="sidebar-link" style="background-color: #1abc9c;">Capricórnio</a>
+      <br>
+      <a href="Aquario.html" class="sidebar-link" style="background-color: #16a085;">Aquário</a>
+      <br>
+      <a href="Peixes.html" class="sidebar-link" style="background-color: #3498db;">Peixes</a>
+    </div>
+
+    <div class="content-container">
+      <div style="text-align: center;">
+        <h1>Bem-vindo ao Site Signos e Sorte!</h1>
+        <p>Aqui você encontrará mensagens de sorte para alegrar o seu dia e informações sobre seu signo. Que a sorte sorria para você hoje e sempre!</p>
+        <button class="generate-button" onclick="showAnimation()">Gerar Sorte do Dia</button>
+      </div>
+      <div class="message-container" id="messageContainer"></div>
+    </div>
+
+    <div class="sidebar-right">
+      <h2>Não sabe qual é seu signo?</h2>
+      <p>Informe sua data de nascimento:</p>
+      <input type="date" id="birthdate">
+      <button class="verify-button" onclick="verifySign()">Verificar</button>
+      <div class="balloon" id="signBalloon"></div>
+      <br><br><br>
+      <a href="combinacao.html" class="credits-button"()onclick="showgame()">Jodo das Combinações</a>
+      <br>
+      <a href="creditos.html" class="credits-button" onclick="showCredits()">Agradecimentos</a>
+      <br>
+      <a href="sobre.html" class="about-button" onclick="showAbout()">Sobre</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Me conheça no <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">LinkedIn</a></p>
+  </footer>
+
+  <script>
+    var phrases = [
+      "A sorte favorece os corajosos.",
+      "Não ser amado é falta de sorte, mas não amar é a própria infelicidade.",
+      "Acredite na sua sorte hoje!",
+      "Sorte é quando a preparação encontra a oportunidade.",
+      "Boa sorte e muito sucesso, mantenha o pensamento positivo que você conquista tudo!",
+      "Sorte é estar pronto quando a oportunidade surge.",
+      "A sorte acompanha os audaciosos.",
+      "Que a sorte esteja sempre ao seu lado.",
+      "Boa sorte em todas as suas empreitadas!",
+      "Que a sorte sorria para você!",
+      "Felicidade é a combinação de sorte com escolhas bem feitas.",
+      "Que sorte a nossa! Nesse mundo há tanta gente, E a vida me pôs ao seu lado.",
+      "Sorte e sucesso em todos os seus projetos!",
+      "Tudo é possível, mais é necessário ter esforço e empenho para alcançar seus objetivos..",
+      "Coração foi à mil, que coisa hein, olha o tamanho da saudade, assim, assim...kkk.",
+      "Estou na esperança que o certo aconteça!",
+      "Bom dia! Cultivar o bem dentro de si é a forma mais sutil de ver o florescimento da bondade e do amor.",
+      "Viver amanhã é muito tarde. Viva hoje .",
+      "Eu não tenho sorte, eu faço minha própria sorte.",
+      "Vá e acorde sua sorte..",
+      "Meu amor não tenho palavras pra descrever o que sinto por você. Sorte que Deus inventou o dedo do meio..",
+      "Eu não sei o que é mais irônico: o bom dia às 6 da manhã ou o boa sorte que os professores colocam na prova..",
+    ];
+
+    function showAnimation() {
+      var animationContainer = document.getElementById("messageContainer");
+      animationContainer.innerHTML = ''; // Limpa as mensagens anteriores
+
+      var randomIndex = Math.floor(Math.random() * phrases.length);
+      var newElement = document.createElement("div");
+      newElement.classList.add("single-message"); // Adiciona a nova classe
+      newElement.innerText = phrases[randomIndex];
+      animationContainer.appendChild(newElement);
+      newElement.classList.add("show-animation");
+
+      setTimeout(function() {
+        newElement.classList.remove("show-animation");
+        newElement.addEventListener("transitionend", function() {
+          animationContainer.removeChild(newElement);
+        });
+      }, 5000);
+    }
+
+    function verifySign() {
+      var birthdate = new Date(document.getElementById("birthdate").value);
+      var month = birthdate.getMonth() + 1;
+      var day = birthdate.getDate();
+      var sign = "";
+
+      if ((month == 3 && day >= 21) || (month == 4 && day <= 20)) {
+        sign = "Áries: de 21 de março a 20 de abril";
+      } else if ((month == 4 && day >= 21) || (month == 5 && day <= 20)) {
+        sign = "Touro: de 21 de abril a 20 de maio";
+      } else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
+        sign = "Gêmeos: de 21 de maio a 20 de junho";
+      } else if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) {
+        sign = "Câncer: de 21 de junho a 22 de julho";
+      } else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
+        sign = "Leão: de 23 de julho a 22 de agosto";
+      } else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
+        sign = "Virgem: de 23 de agosto a 22 de setembro";
+      } else if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) {
+        sign = "Libra: de 23 de setembro a 22 de outubro";
+      } else if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) {
+        sign = "Escorpião: de 23 de outubro a 21 de novembro";
+      } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
+        sign = "Sagitário: de 22 de novembro a 21 de dezembro";
+      } else if ((month == 12 && day >= 22) || (month == 1 && day <= 20)) {
+        sign = "Capricórnio: de 22 de dezembro a 20 de janeiro";
+      } else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {
+        sign = "Aquário: de 21 de janeiro a 18 de fevereiro";
+      } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
+        sign = "Peixes: de 19 de fevereiro a 20 de março";
+      }
+
+      var balloon = document.getElementById("signBalloon");
+      balloon.innerText = sign;
+      balloon.classList.add("show");
+      setTimeout(function() {
+        balloon.classList.remove("show");
+      }, 5000);
+    }
+
+  </script>
+</body>
+</html>
