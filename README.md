@@ -16,3 +16,19 @@ Espero que este projeto inspire outros entusiastas da programação e design a e
 
 #Programação #Design #DesenvolvimentoWeb #AprendizadoConstante #Criatividade #Tecnologia
 
+![Captura de tela 2023-08-08 143013](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/c8cb52ed-0c90-4f0b-9543-25ef869c916a)
+![Captura de tela 2023-08-08 142859](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/d020b62e-3838-448a-a69c-10c9aa893bd5)
+![Captura de tela 2023-08-08 142841](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/2f15b449-7d53-4980-bedb-bcb2c0067f3e)
+![Captura de tela 2023-08-08 142814](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/481756cf-05cd-45d5-900b-39b81565b797)
+![Captura de tela 2023-08-08 142755](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/84b469fc-c6c9-43ae-982c-06c96357d798)
+![Captura de tela 2023-08-08 142736](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/ca82ef82-8a2d-40c7-8f38-1d3c183ea6f8)
+![Captura de tela 2023-08-08 142720](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/575a57b0-4a34-40e4-99bb-e27922cea01d)
+![Captura de tela 2023-08-08 142659](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/e4c0dedb-9295-4ec6-977f-f208afd2a953)
+![Captura de tela 2023-08-08 142628](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/ccf61948-d655-4de5-8e8d-e0eb42a38c9e)
+![Captura de tela 2023-08-08 142606](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/16663479-ea5d-43e4-8deb-1d4c0db5a01c)
+![Captura de tela 2023-08-08 142546](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/e03b1ab4-1e38-47dc-835b-3dd316a85287)
+![Captura de tela 2023-08-08 142448](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/e905f89a-d929-4314-a3ee-83c42ed22a6e)
+![Captura de tela 2023-08-08 142423](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/846d0289-8266-4b53-9773-f619d263fbe7)
+![Captura de tela 2023-08-08 142357](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/802d7bb3-f855-4de3-bb10-a7cbce2ac297)
+![Captura de tela 2023-08-08 142336](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/2697dd7e-593a-48c8-9aec-4ca9eac42d05)
+![Captura de tela 2023-08-08 141515](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/62565377-21dc-48f8-849a-354acc7f3917)
