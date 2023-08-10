@@ -4,7 +4,7 @@
   <title>Signos e Sorte</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>    
+   <style>    
     body {
       font-family: Arial, sans-serif;
       background-image: url("https://www.jdv.com.br/wp-content/uploads/2023/03/horoscopo-previsao-signos-4-a-10-de-julho_0-824x430.jpg");
@@ -259,7 +259,31 @@
         transform: scale(1);
       }
     }
-    
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .content-container {
+        padding: 40px;
+      }
+      .sidebar-right {
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      footer {
+        position: relative;
+      }
+    }
   </style>
 
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
