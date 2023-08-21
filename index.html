@@ -1,332 +1,221 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Signos e Sorte</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>    
-   body {
-      font-family: Arial, sans-serif;
-      background-image: url("https://i.postimg.cc/vZds2gFt/Design-sem-nome-1.jpg");
-      background-size: 100% 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
+<title>Signos e Sorte</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://i.postimg.cc/0jSkXrPg/Apresenta-o-de-Persona-do-Usu-rio-Ilustrada-Preto-Roxo-Neon-Verde-1.gif");
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
+  .header {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    color: #fff;
+    padding: 10px;
+  }
 
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 
-    .sidebar {
-      position: fixed;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 200px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      background-color: rgba(93, 85, 141, 0.9);
-      border-top-right-radius: 40px;
-      border-bottom-right-radius: 40px;
-    }
+  .verify-container {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
-    .sidebar-link {
-      width: 90%;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      border: 2px solid #fff;
-      padding: 8px 20px;
-      text-align: center;
-    }
+  .verify-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
 
-    .sidebar-link:hover {
-      background-color: #663399;
-      transform: translateX(5px);
-    }
+  .verify-button:hover {
+    background-color: #c74d37;
+    transform: scale(1.05);
+  }
 
-    .generate-button {
-      background-color: #3498db;
-      color: #fff;
-      border: none;
-      border-radius: 40px;
+  .signs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .sidebar-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #fff;
+    border-radius: 5px;
+  }
+
+  .sidebar-link:hover {
+    background-color: #663399;
+    transform: translateX(5px);
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(241, 241, 241, 0.5);
+    color: #000;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  footer a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 768px) {
+    .header {
+      margin-top: 40px;
       font-size: 24px;
-      font-weight: bold;
-      margin: 20px auto;
-      cursor: pointer;
-      display: block;
-      width: 300px;
-      padding: 8px 20px;
-      text-align: center;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    .show-animation {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .sidebar-right {
-      position: fixed;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      width: 200px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      background-color: rgba(93, 85, 141, 0.9);
-      border-top-left-radius: 40px;
-      border-bottom-left-radius: 40px;
-    }
-
-    .sidebar-right-header {
-      font-family: 'Pacifico', cursive;
-      font-size: 28px;
-      color: #fff;
-      margin-bottom: 10px;
-    }
-
-    .sidebar-right-text {
-      color: #fff;
-      margin-bottom: 20px;
-    }
-
-    .sidebar-right input {
-      width: 100%;
-      padding: 8px;
-      border-radius: 5px;
-      border: none;
-      margin-bottom: 10px;
-      font-size: 14px;
     }
 
     .verify-button {
-      background-color: #e74c3c;
-      color: #fff;
-      border: none;
-      border-radius: 40px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      display: block;
-      width: 90%;
-      padding: 8px 20px;
-      text-align: center;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      font-size: 14px;
+      padding: 8px 16px;
     }
 
-    .verify-button:hover {
-      background-color: #c74d37;
-      transform: scale(1.05);
+    .sidebar-link {
+      font-size: 14px;
+      padding: 6px 14px;
     }
 
-    .balloon {
-      position: center;
-      background-color: #87319c;
-      color: #fff;
-      border-radius: 4px;
+    .container {
       padding: 10px;
-      font-size: 20px;
-      bottom: 80px;
-      right: 80px;
-      opacity: 50;
-      transform: translateX(300px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .balloon.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .game-button, .credits-button, .about-button {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      border: 2px solid #fff;
-      padding: 8px 20px;
-      text-align: center;
-      width: 90%;
-    }
-
-    .game-button:hover, .credits-button:hover, .about-button:hover {
-      background-color: #663399;
-      transform: translateX(5px);
-    }
-
-    .game-button {
-      background-color: #3498db;
-    }
-
-    .credits-button {
-      background-color: #e74c3c;
-    }
-
-    .about-button {
-      background-color: #27ae60;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: rgba(241, 241, 241, 0.5);
-      color: #000;
-      border-radius: 10px;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-
-    footer a {
-      color: #000;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-    @media screen and (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .sidebar,
-      .sidebar-right {
-        position: static;
-        width: 100%;
-        padding: 20px;
-        border-radius: 0;
-      }
-
-      .sidebar-right-header,
-      .sidebar-right-text,
-      .sidebar-right input,
-      .verify-button,
-      .balloon,
-      .credits-button,
-      .about-button {
-        width: 100%;
-      }
-
-      footer {
-        position: static;
-      }
     }
     
-  </style>
+    .buttons-horizontal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
+    .horizontal-button {
+      margin: 5px 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .buttons-horizontal {
+      display: flex;
+      justify-content: space-between;
+      max-width: 500px;
+      margin-top: 20px;
+    }
+
+    .horizontal-button {
+      flex: 1;
+      margin: 0 5px;
+   
+   
+    </style>
+  
+  }
+  }
+  
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <h7>SIGNOS</h7>
-      <a href="aries.html" class="sidebar-link" style="background-color: #e74c3c;">Áries</a>
-      <br>
-      <a href="touro.html" class="sidebar-link" style="background-color: #f39c12;">Touro</a>
-      <br>
-      
-      
+<div class="header">Site dos Signos</div>
+<div class="container">
+ 
+<div class="verify-container">    
 
-     
-<a href="Gemeos.html" class="sidebar-link" style="background-color: #d35400;">Gêmeos</a>
+   
+<h2 style="color: #663399; font-weight: bold;">Não sabe qual é seu signo?</h2>
+    
       
-      
-<br>
-      
-     
-<a href="Cancer.html" class="sidebar-link" style="background-color: #c0392b;">Câncer</a>
-      
-     
-<br>
-      <a href="Leo.html" class="sidebar-link" style="background-color: #27ae60;">Leão</a>
-      <br>
-      
-      
-<a href="virgem.html" class="sidebar-link" style="background-color: #2ecc71;">Virgem</a>
-      <br>
-      
-      
-<a href="Libra.html" class="sidebar-link" style="background-color: #3498db;">Libra</a>
-      <br>
-      
-      
-<a href="Escorpiao.html" class="sidebar-link" style="background-color: #9b59b6;">Escorpião</a>
-      
-     
-<br>
-      <a href="Sagitario.html" class="sidebar-link" style="background-color: #8e44ad;">Sagitário</a>
-      
-     
-<br>
-      
-      
-<a href="Capricornio.html" class="sidebar-link" style="background-color: #1abc9c;">Capricórnio</a>
-      <br>
-      <a href="Aquario.html" class="sidebar-link" style="background-color: #16a085;">Aquário</a>
-      <br>
-      <a href="Peixes.html" class="sidebar-link" style="background-color: #3498db;">Peixes</a>
+<p>Informe sua data de nascimento:</p>
+    
+    
+
+   
+<input type="date" id="birthdate">
+    
+    
+
+   
+<button class="verify-button" onclick="verifySign()">Verificar</button>
+  
+  </div
+
+ 
+</div>
+  
+  
+<div class="signs-container">
+    <a href="aries.html" class="sidebar-link" style="background-color: #e74c3c;">Áries</a>
+    <a href="touro.html" class="sidebar-link" style="background-color: #f39c12;">Touro</a>
+    <a href="Gemeos.html" class="sidebar-link" style="background-color: #d35400;">Gêmeos</a>
+    <a href="Cancer.html" class="sidebar-link" style="background-color: #c0392b;">Câncer</a>
+    <a href="Leo.html" class="sidebar-link" style="background-color: #27ae60;">Leão</a>
+    <a href="virgem.html" class="sidebar-link" style="background-color: #2ecc71;">Virgem</a>
+    <a href="Libra.html" class="sidebar-link" style="background-color: #3498db;">Libra</a>
+    <a href="Escorpiao.html" class="sidebar-link" style="background-color: #9b59b6;">Escorpião</a>
+    <a href="Sagitario.html" class="sidebar-link" style="background-color: #8e44ad;">Sagitário</a>
+    <a href="Capricornio.html" class="sidebar-link" style="background-color: #1abc9c;">Capricórnio</a>
+    <a href="Aquario.html" class="sidebar-link" style="background-color: #16a085;">Aquário</a>
+    <a href="Peixes.html" class="sidebar-link" style="background-color: #3498db;">Peixes</a>
+  </div>
+  <div class="buttons-horizontal">
+    <a href="combinacao.html" class="sidebar-link horizontal-button" style="background-color: #d4276f;">Combinações</a>
+    <a href="creditos.html" class="sidebar-link horizontal-button" style="background-color: #705e5c;">Agradecimentos</a>
+    <a href="sobre.html" class="sidebar-link horizontal-button" style="background-color: #705e5c;">Sobre</a>
+  
+  
+</div>
+  
+  
+
+ 
+<footer>
     
    
+<p>Me conheça no <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">LinkedIn</a></p>
+  
+  
+</footer>
+
+
 </div>
 
-    
-
-    <div class="sidebar-right">
-      <h2>Não sabe qual é seu signo?</h2>
-      <p>Informe sua data de nascimento:</p>
-      <input type="date" id="birthdate">
-      <button class="verify-button" onclick="verifySign()">Verificar</button>
-      <div class="balloon" id="signBalloon"></div>
-      <br><br><br>
-      <a href="combinacao.html" class="credits-button"()onclick="showgame()">Jogo das Combinações</a>
-      <br>
-      <a href="creditos.html" class="credits-button" onclick="showCredits()">Agradecimentos</a>
-      <br>
-      <a href="sobre.html" class="about-button" onclick="showAbout()">Sobre</a>
-    </div>
-  </div>
-
-  <footer>
-    <p>Me conheça no <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">LinkedIn</a></p>
-  </footer>
-
-  <script>
+<script>
     function verifySign() {
       var birthdate = new Date(document.getElementById("birthdate").value);
       var month = birthdate.getMonth() + 1;
