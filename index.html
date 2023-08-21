@@ -73,7 +73,7 @@
   }
 
   .sidebar-link:hover {
-    background-color: #663399;
+    background-color: #7c2caa;
     transform: translateX(5px);
   }
 
@@ -140,46 +140,22 @@
     .horizontal-button {
       flex: 1;
       margin: 0 5px;
-   
-   
-    </style>
-  
+    }
   }
-  }
-  
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
-
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="header">Site dos Signos</div>
 <div class="container">
- 
-<div class="verify-container">    
-
-   
-<h2 style="color: #663399; font-weight: bold;">Não sabe qual é seu signo?</h2>
-    
-      
-<p>Informe sua data de nascimento:</p>
-    
-    
-
-   
-<input type="date" id="birthdate">
-    
-    
-
-   
-<button class="verify-button" onclick="verifySign()">Verificar</button>
-  
-  </div
-
- 
-</div>
-  
-  
-<div class="signs-container">
+  <div class="verify-container">
+    <h2 style="color: #2fda29; font-weight: bold;">Não sabe qual é seu signo?</h2>
+    <p>Informe sua data de nascimento:</p>
+    <input type="date" id="birthdate">
+    <button class="verify-button" onclick="verifySign()">Verificar</button>
+    <div class="balloon text-center" id="signBalloon"></div>
+  </div>
+  <div class="signs-container">
     <a href="aries.html" class="sidebar-link" style="background-color: #e74c3c;">Áries</a>
     <a href="touro.html" class="sidebar-link" style="background-color: #f39c12;">Touro</a>
     <a href="Gemeos.html" class="sidebar-link" style="background-color: #d35400;">Gêmeos</a>
@@ -193,6 +169,7 @@
     <a href="Aquario.html" class="sidebar-link" style="background-color: #16a085;">Aquário</a>
     <a href="Peixes.html" class="sidebar-link" style="background-color: #3498db;">Peixes</a>
   </div>
+  
   <div class="buttons-horizontal">
     <a href="combinacao.html" class="sidebar-link horizontal-button" style="background-color: #d4276f;">Combinações</a>
     <a href="creditos.html" class="sidebar-link horizontal-button" style="background-color: #705e5c;">Agradecimentos</a>
