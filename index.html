@@ -259,10 +259,7 @@
         transform: scale(1);
       }
     }
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
+     @media (max-width: 768px) {
       .sidebar {
         position: relative;
         width: 100%;
@@ -280,6 +277,10 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
+      .generate-button, .game-button, .credits-button, .about-button {
+        width: 100%; /* Full width buttons for better mobile experience */
+      }
+    
       footer {
         position: relative;
       }
@@ -287,7 +288,7 @@
 
   </style>
 
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
