@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>    
-    body {
+   body {
       font-family: Arial, sans-serif;
-      background-image: url("https://www.jdv.com.br/wp-content/uploads/2023/03/horoscopo-previsao-signos-4-a-10-de-julho_0-824x430.jpg");
-      background-size: cover;
+      background-image: url("https://i.postimg.cc/vZds2gFt/Design-sem-nome-1.jpg");
+      background-size: 100% 100%;
       background-position: center;
       background-repeat: no-repeat;
       color: #fff;
@@ -17,6 +17,7 @@
       height: 100vh;
       background-color: rgba(0, 0, 0, 0.5);
     }
+
 
     .container {
       display: flex;
@@ -74,46 +75,6 @@
       text-align: center;
       transition: background-color 0.3s ease, transform 0.3s ease;
       animation: pulse 2s ease-in-out infinite;
-    }
-
-    .generate-button:hover {
-      background-color: #2980b9;
-      transform: scale(1.05);
-    }
-
-    .content-container {
-      max-width: 800px;
-      background-color: rgba(93, 85, 141, 0.9);
-      border-radius: 40px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      padding: 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .message-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 200px;
-      font-size: 30px;
-      font-weight: bold;
-      opacity: 50;
-      transform: translateY(-20px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      text-align: center;
-    }
-
-    .single-message {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 200px;
-      font-size: 30px;
-      font-weight: bold;
-      text-align: center;
     }
 
     .show-animation {
@@ -259,6 +220,33 @@
         transform: scale(1);
       }
     }
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar,
+      .sidebar-right {
+        position: static;
+        width: 100%;
+        padding: 20px;
+        border-radius: 0;
+      }
+
+      .sidebar-right-header,
+      .sidebar-right-text,
+      .sidebar-right input,
+      .verify-button,
+      .balloon,
+      .credits-button,
+      .about-button {
+        width: 100%;
+      }
+
+      footer {
+        position: static;
+      }
+    }
     
   </style>
 
@@ -272,35 +260,52 @@
       <br>
       <a href="touro.html" class="sidebar-link" style="background-color: #f39c12;">Touro</a>
       <br>
-      <a href="Gemeos.html" class="sidebar-link" style="background-color: #d35400;">Gêmeos</a>
-      <br>
-      <a href="Cancer.html" class="sidebar-link" style="background-color: #c0392b;">Câncer</a>
-      <br>
+      
+      
+
+     
+<a href="Gemeos.html" class="sidebar-link" style="background-color: #d35400;">Gêmeos</a>
+      
+      
+<br>
+      
+     
+<a href="Cancer.html" class="sidebar-link" style="background-color: #c0392b;">Câncer</a>
+      
+     
+<br>
       <a href="Leo.html" class="sidebar-link" style="background-color: #27ae60;">Leão</a>
       <br>
-      <a href="virgem.html" class="sidebar-link" style="background-color: #2ecc71;">Virgem</a>
+      
+      
+<a href="virgem.html" class="sidebar-link" style="background-color: #2ecc71;">Virgem</a>
       <br>
-      <a href="Libra.html" class="sidebar-link" style="background-color: #3498db;">Libra</a>
+      
+      
+<a href="Libra.html" class="sidebar-link" style="background-color: #3498db;">Libra</a>
       <br>
-      <a href="Escorpiao.html" class="sidebar-link" style="background-color: #9b59b6;">Escorpião</a>
-      <br>
+      
+      
+<a href="Escorpiao.html" class="sidebar-link" style="background-color: #9b59b6;">Escorpião</a>
+      
+     
+<br>
       <a href="Sagitario.html" class="sidebar-link" style="background-color: #8e44ad;">Sagitário</a>
-      <br>
-      <a href="Capricornio.html" class="sidebar-link" style="background-color: #1abc9c;">Capricórnio</a>
+      
+     
+<br>
+      
+      
+<a href="Capricornio.html" class="sidebar-link" style="background-color: #1abc9c;">Capricórnio</a>
       <br>
       <a href="Aquario.html" class="sidebar-link" style="background-color: #16a085;">Aquário</a>
       <br>
       <a href="Peixes.html" class="sidebar-link" style="background-color: #3498db;">Peixes</a>
-    </div>
+    
+   
+</div>
 
-    <div class="content-container">
-      <div style="text-align: center;">
-        <h1>Bem-vindo ao Site Signos e Sorte!</h1>
-        <p>Aqui você encontrará mensagens de sorte para alegrar o seu dia e informações sobre seu signo. Que a sorte sorria para você hoje e sempre!</p>
-        <button class="generate-button" onclick="showAnimation()">Gerar Sorte do Dia</button>
-      </div>
-      <div class="message-container" id="messageContainer"></div>
-    </div>
+    
 
     <div class="sidebar-right">
       <h2>Não sabe qual é seu signo?</h2>
@@ -309,7 +314,7 @@
       <button class="verify-button" onclick="verifySign()">Verificar</button>
       <div class="balloon" id="signBalloon"></div>
       <br><br><br>
-      <a href="combinacao.html" class="credits-button"()onclick="showgame()">Jodo das Combinações</a>
+      <a href="combinacao.html" class="credits-button"()onclick="showgame()">Jogo das Combinações</a>
       <br>
       <a href="creditos.html" class="credits-button" onclick="showCredits()">Agradecimentos</a>
       <br>
@@ -322,50 +327,6 @@
   </footer>
 
   <script>
-    var phrases = [
-      "A sorte favorece os corajosos.",
-      "Não ser amado é falta de sorte, mas não amar é a própria infelicidade.",
-      "Acredite na sua sorte hoje!",
-      "Sorte é quando a preparação encontra a oportunidade.",
-      "Boa sorte e muito sucesso, mantenha o pensamento positivo que você conquista tudo!",
-      "Sorte é estar pronto quando a oportunidade surge.",
-      "A sorte acompanha os audaciosos.",
-      "Que a sorte esteja sempre ao seu lado.",
-      "Boa sorte em todas as suas empreitadas!",
-      "Que a sorte sorria para você!",
-      "Felicidade é a combinação de sorte com escolhas bem feitas.",
-      "Que sorte a nossa! Nesse mundo há tanta gente, E a vida me pôs ao seu lado.",
-      "Sorte e sucesso em todos os seus projetos!",
-      "Tudo é possível, mais é necessário ter esforço e empenho para alcançar seus objetivos..",
-      "Coração foi à mil, que coisa hein, olha o tamanho da saudade, assim, assim...kkk.",
-      "Estou na esperança que o certo aconteça!",
-      "Bom dia! Cultivar o bem dentro de si é a forma mais sutil de ver o florescimento da bondade e do amor.",
-      "Viver amanhã é muito tarde. Viva hoje .",
-      "Eu não tenho sorte, eu faço minha própria sorte.",
-      "Vá e acorde sua sorte..",
-      "Meu amor não tenho palavras pra descrever o que sinto por você. Sorte que Deus inventou o dedo do meio..",
-      "Eu não sei o que é mais irônico: o bom dia às 6 da manhã ou o boa sorte que os professores colocam na prova..",
-    ];
-
-    function showAnimation() {
-      var animationContainer = document.getElementById("messageContainer");
-      animationContainer.innerHTML = ''; // Limpa as mensagens anteriores
-
-      var randomIndex = Math.floor(Math.random() * phrases.length);
-      var newElement = document.createElement("div");
-      newElement.classList.add("single-message"); // Adiciona a nova classe
-      newElement.innerText = phrases[randomIndex];
-      animationContainer.appendChild(newElement);
-      newElement.classList.add("show-animation");
-
-      setTimeout(function() {
-        newElement.classList.remove("show-animation");
-        newElement.addEventListener("transitionend", function() {
-          animationContainer.removeChild(newElement);
-        });
-      }, 5000);
-    }
-
     function verifySign() {
       var birthdate = new Date(document.getElementById("birthdate").value);
       var month = birthdate.getMonth() + 1;
@@ -405,7 +366,6 @@
         balloon.classList.remove("show");
       }, 5000);
     }
-
   </script>
 </body>
 </html>
