@@ -59,8 +59,8 @@
 
     .back-btn {
       position: fixed;
-      top: 20px;
-      left: 20px;
+      top: 40px;
+      left: 40px;
       display: flex;
       align-items: center;
       padding: 10px 20px;
@@ -129,8 +129,8 @@
       color: #fff;
       border: none;
       border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      width: 75px;
+      height: 75px;
       font-size: 12px;
       line-height: 1.2;
       cursor: pointer;
@@ -142,8 +142,24 @@
       overflow: hidden;
     }
 
+    
+
     .floating-button:hover {
-      background-color: #b60810;
+      transform: scale(1.05);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+    .floating-button:before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 8px;
+      background: linear-gradient(to bottom, #ec0666, #d30516);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.2s ease;
     }
 
     /* Estilos para o texto dentro do botão */
@@ -167,7 +183,9 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       display: none;
     }
-
+    .floating-button:hover:before {
+      opacity: 1;
+    }
     .fortune-popup h3 {
       margin-top: 0;
     }
