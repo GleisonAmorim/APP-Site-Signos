@@ -7,6 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      
       background-image: url("https://i.postimg.cc/Dw7J41TJ/Frasco-para-viagem-3.gif");
       background-size: cover;
       background-repeat: no-repeat;
@@ -16,40 +17,39 @@
       padding: 0;
       background-color: rgba(0, 0, 0, 0.5);
     }
-
     
 
     h1 {
-      color: #000;
+      color: #000000;
       text-align: center;
       margin-top: 30px;
     }
 
     h2 {
-      color: #000;
+      color: #000000;
     }
 
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 150px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 150px;
+}
 
     .characteristics {
       margin-top: 20px;
     }
 
     .characteristics h2 {
-      color: #000;
+      color: #000000;
       margin-bottom: 10px;
     }
 
@@ -59,8 +59,8 @@
 
     .back-btn {
       position: fixed;
-      top: 20px;
-      left: 20px;
+      top: 40px;
+      left: 40px;
       display: flex;
       align-items: center;
       padding: 10px 20px;
@@ -109,12 +109,12 @@
     }
 
     .symbol img,
-    .tattoo img,
-    .another-image img,
-    .study-area img {
+    .tattoo img {
       width: 100%;
       max-width: 300px;
-      margin-bottom: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     .symbol,
@@ -234,38 +234,69 @@
       </div>
     </div>
   </div>
-    <button class="floating-button" id="fortuneButton">Mensagem Especial</button>
+  <button class="floating-button" id="fortuneButton">Mensagem Especial</button>
+  <span class="button-text">Mensagem Especial</span>
+</button>
 
-  <!-- Mensagem de sorte -->
-  <div class="fortune-popup" id="fortunePopup">
-    <span class="close-btn" onclick="closeFortunePopup()">&times;</span>
-    <h3></h3>
-    <p>Há boas energias ao seu redor. Este é um momento propício para se concentrar em suas metas e objetivos.</p>
-  </div>
+<div class="fortune-popup" id="fortunePopup">
+  <span class="close-btn" onclick="closeFortunePopup()">&times;</span>
+  <h3>Mensagem do Dia:</h3>
+  <p id="fortuneMessage">Clique no botão para obter uma mensagem especial.</p>
+</div>
 
-  <footer>
-    <p>Me conheça no <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">LinkedIn</a></p>
-  </footer>
+<footer>
+  <p>Me conheça no <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">LinkedIn</a></p>
+</footer>
 
-  <script>
-    // Função para mostrar a mensagem de sorte
-    function showFortunePopup() {
-      var popup = document.getElementById("fortunePopup");
-      popup.style.display = "block";
-      setTimeout(function() {
-        popup.style.display = "none";
-      }, 5000); // 5000 ms = 5 segundos
-    }
+<script>
+  function showFortunePopup() {
+    var popup = document.getElementById("fortunePopup");
+    var message = document.getElementById("fortuneMessage");
+    var randomIndex = Math.floor(Math.random() * messages.length);
+    message.textContent = messages[randomIndex];
+    popup.style.display = "block";
+  }
 
-    // Função para fechar a mensagem de sorte
-    function closeFortunePopup() {
-      var popup = document.getElementById("fortunePopup");
-      popup.style.display = "none";
-    }
+  function closeFortunePopup() {
+    var popup = document.getElementById("fortunePopup");
+    popup.style.display = "none";
+  }
 
-    // Associar a função de exibir a mensagem de sorte ao botão
-    var fortuneButton = document.getElementById("fortuneButton");
+  var messages = [
+    "Seu amor e cuidado são como um farol para aqueles ao seu redor. Espalhe sua luz e inspire positividade, querido câncer.",
+"Aproveite o poder curativo do seu instinto. Você é capaz de superar qualquer desafio que cruzar seu caminho, Câncer.",
+"Sua intuição é sua maior aliada. Confie nos sinais do universo e siga o caminho que o levará ao sucesso.",
+"Seu coração compassivo é uma dádiva. Use sua empatia para construir relacionamentos duradouros e duradouros.",
+"As ondas de mudança estão trazendo oportunidades incríveis. Abra-se para o desconhecido e veja onde a vida o transporte, Câncer.",
+"Sua natureza resiliente é sua força secreta. Enfrente cada desafio com coragem e saiba que você é capaz de superá-los.",
+"Você possui um dom especial para nutrir e apoiar. Suas ações amorosas têm um impacto duradouro naqueles ao seu redor.",
+"Este é o momento de se concentrar em suas metas e sonhos. Seu esforço incansável o leva a grandes corpos, câncer.",
+"Mantenha-se fiel à sua intuição. Suas escolhas são guiadas por uma sabedoria interior profunda e valiosa.",
+"Sua imaginação é o berço da criação. Deixe suas ideias fluírem e transforme-as em realidade, Câncer.",
+"Seu coração generoso é uma fonte de bênçãos. Abrace cada oportunidade de gozar amor e vitória pelo mundo.",
+"Confie na jornada que está trilhando. Cada passo o aproxima de um futuro brilhante e repleto de emoção.",
+"Sua dedicação incansável está rendendo frutos notáveis. Continue a trabalhar com paixão e alcance suas metas, Câncer.",
+"O amor e a harmonia estão à sua volta. Cultive relações saudáveis ​​e deixe sua influência positiva brilhar.",
+"Aproveite o presente como uma dádiva. Cada momento é uma oportunidade para crescer e se fortalecer.",
+"Seu instinto é protetor é importante. Use-o para guiar suas escolhas e proteger aqueles que você ama, Câncer.",
+"A criatividade está fluindo em sua direção. Use sua imaginação para enfrentar desafios com soluções inovadoras.",
+"Você é um farol de esperança para os outros. Compartilhe sua sabedoria e inspire mudanças positivas no mundo.",
+"Sua intuição é como uma bússola. Confie em sua orientação interna para tomar decisões que o levem ao sucesso.",
+"Sua natureza sensível é uma força incrível. Use-a para criar conexões profundas e genuínas com aqueles ao seu redor, Câncer.",
+"Aproveite as oportunidades que se apresentam. Você está destinado a um futuro brilhante e cheio de realizações.",
+"Sua empatia é um dom poderoso. Use-a para entender as necessidades dos outros e fazer uma diferença positiva.",
+"Cada passo é uma vitória em sua jornada. Continue avançando com espiritualidade e alcance o sucesso, Câncer.",
+"Você é capaz de transformar desafios em oportunidades. Mantenha-se resiliente e confiante em sua capacidade de superar qualquer obstáculo.",
+"Sua sensibilidade é uma dádiva para o mundo. Deixe seu coração guiar suas ações e inspire compaixão onde quer que vá.",
+"A confiança é a chave para desbloquear seu potencial máximo. Acredite em si mesmo e alcance as estrelas, Câncer.",
+"Mantenha-se conectado à sua intuição. Ela o guiará para o caminho certo, mesmo nas situações mais desafiadoras.",
+"Apreciar as pequenas alegrias da vida é uma fonte de felicidade e firmeza. Celebre cada momento, querido Câncer.",
+"Você tem o poder de moldar seu próprio destino. Visualize suas metas e trabalhe incansavelmente para realizá-las.",
+"Sua experiência é admirável. Continue avançando, enfrentando cada obstáculo com coragem, e alcançará o sucesso que merece.",
+];
+
+      var fortuneButton = document.getElementById("fortuneButton");
     fortuneButton.addEventListener("click", showFortunePopup);
   </script>
-  </body>
-  </html>
+</body>
+</html>
