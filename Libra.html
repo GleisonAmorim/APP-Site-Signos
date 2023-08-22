@@ -22,18 +22,23 @@
       z-index: -1;
       background-image: url("https://i.postimg.cc/fLrKCDsd/Frasco-para-viagem-11.gif");
       background-size: cover;
-      background-position: center;
       background-repeat: no-repeat;
+      background-attachment: fixed; /* Background fixo ao rolar a página */
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.5);
     }
+    
 
     h1 {
-      color: #000;
+      color: #000000;
       text-align: center;
       margin-top: 30px;
     }
 
     h2 {
-      color: #000;
+      color: #000000;
     }
 
     .container {
@@ -45,11 +50,10 @@
       margin: 30px auto;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
       position: relative;
       overflow: hidden;
       margin-bottom: 150px;
-      
     }
 
     .characteristics {
@@ -57,7 +61,7 @@
     }
 
     .characteristics h2 {
-      color: #000;
+      color: #000000;
       margin-bottom: 10px;
     }
 
@@ -67,8 +71,8 @@
 
     .back-btn {
       position: fixed;
-      top: 20px;
-      left: 20px;
+      top: 40px;
+      left: 40px;
       display: flex;
       align-items: center;
       padding: 10px 20px;
@@ -117,17 +121,94 @@
     }
 
     .symbol img,
-    .tattoo img,
-    .another-image img,
-    .study-area img {
+    .tattoo img {
       width: 100%;
       max-width: 300px;
-      margin-bottom: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     .symbol,
     .tattoo {
       width: 100%;
+    }
+    .floating-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #a111b4;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+      font-size: 12px;
+      line-height: 1.2;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+      overflow: hidden;
+    }
+
+    
+
+    .floating-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+    .floating-button:before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 8px;
+      background: linear-gradient(to bottom, #ec0666, #d30516);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.2s ease;
+    }
+
+    /* Estilos para o texto dentro do botão */
+    .button-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    /* Estilos para a mensagem de sorte */
+    .fortune-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 300px;
+      background-color: rgba(207, 11, 214, 0.9);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      display: none;
+    }
+    .floating-button:hover:before {
+      opacity: 1;
+    }
+    .fortune-popup h3 {
+      margin-top: 0;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #999;
+      font-size: 18px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -166,8 +247,38 @@
       </div>
     </div>
   </div>
+  <button class="floating-button" id="fortuneButton">Mensagem Especial</button>
+
+  <!-- Mensagem de sorte -->
+  <div class="fortune-popup" id="fortunePopup">
+    <span class="close-btn" onclick="closeFortunePopup()">&times;</span>
+    <h3></h3>
+    <p>Há boas energias ao seu redor. Este é um momento propício para se concentrar em suas metas e objetivos.</p>
+  </div>
+
   <footer>
     <p>Me conheça no <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">LinkedIn</a></p>
   </footer>
-</body>
-</html>
+
+  <script>
+    // Função para mostrar a mensagem de sorte
+    function showFortunePopup() {
+      var popup = document.getElementById("fortunePopup");
+      popup.style.display = "block";
+      setTimeout(function() {
+        popup.style.display = "none";
+      }, 5000); // 5000 ms = 5 segundos
+    }
+
+    // Função para fechar a mensagem de sorte
+    function closeFortunePopup() {
+      var popup = document.getElementById("fortunePopup");
+      popup.style.display = "none";
+    }
+
+    // Associar a função de exibir a mensagem de sorte ao botão
+    var fortuneButton = document.getElementById("fortuneButton");
+    fortuneButton.addEventListener("click", showFortunePopup);
+  </script>
+  </body>
+  </html>
