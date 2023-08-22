@@ -246,30 +246,38 @@
       </div>
     </div>
   </div>
-  <button class="floating-button" id="fortuneButton">
-    Mensagem Especial
-  
-  </button>
+    <button class="floating-button" id="fortuneButton">Mensagem Especial</button>
+
+  <!-- Mensagem de sorte -->
   <div class="fortune-popup" id="fortunePopup">
-    <span class="close-btn" id="closeButton">&times;</span>
-  
-    <p>Hoje é um bom dia para focar em seus objetivos e tomar decisões importantes. Aproveite as oportunidades que surgirem.</p>
+    <span class="close-btn" onclick="closeFortunePopup()">&times;</span>
+    <h3></h3>
+    <p>Há boas energias ao seu redor. Este é um momento propício para se concentrar em suas metas e objetivos.</p>
   </div>
+
   <footer>
     <p>Me conheça no <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">LinkedIn</a></p>
   </footer>
+
   <script>
-    const fortuneButton = document.getElementById('fortuneButton');
-    const fortunePopup = document.getElementById('fortunePopup');
-    const closeButton = document.getElementById('closeButton');
+    // Função para mostrar a mensagem de sorte
+    function showFortunePopup() {
+      var popup = document.getElementById("fortunePopup");
+      popup.style.display = "block";
+      setTimeout(function() {
+        popup.style.display = "none";
+      }, 5000); // 5000 ms = 5 segundos
+    }
 
-    fortuneButton.addEventListener('click', () => {
-      fortunePopup.style.display = 'block';
-    });
+    // Função para fechar a mensagem de sorte
+    function closeFortunePopup() {
+      var popup = document.getElementById("fortunePopup");
+      popup.style.display = "none";
+    }
 
-    closeButton.addEventListener('click', () => {
-      fortunePopup.style.display = 'none';
-    });
+    // Associar a função de exibir a mensagem de sorte ao botão
+    var fortuneButton = document.getElementById("fortuneButton");
+    fortuneButton.addEventListener("click", showFortunePopup);
   </script>
-</body>
-</html>
+  </body>
+  </html>
