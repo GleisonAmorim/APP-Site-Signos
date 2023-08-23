@@ -53,7 +53,8 @@ link do site: https://site-signos.vercel.app/index.html
 
 Próximo passo: Transformar o site em um APP - Continua em um projeto futuro!
 
+23/08/2023 utilizando o WEBSITE 2 APK BUILDER convertí meu site para um app, parece funcionar tudo ok! Não consegui publicar na play store ainda, mas futuramente vou publicar 
 
 
-
+Baixe este app: https://drive.google.com/file/d/1cbDHcwmhB1ps0mRmGV7CUvXvKz4zXSMw/view?ts=64e607d2
 
