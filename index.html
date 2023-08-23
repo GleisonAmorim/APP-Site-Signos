@@ -79,7 +79,8 @@
 
   footer {
     text-align: center;
-    padding: 5px;
+    padding: 1px;
+    margin-top: 2px; /* Adicionei um margin-top para controlar a altura */
     background-color: rgba(241, 241, 241, 0.5);
     color: #000;
     border-radius: 5px;
@@ -109,6 +110,7 @@
     padding: 10px 20px;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite; /* Adiciona a animação de pulsação */
   }
 
   .combination-button:hover {
@@ -117,35 +119,20 @@
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   }
 
-  @media screen and (max-width: 768px) {
-    .header {
-      margin-top: 40px;
-      font-size: 24px;
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
     }
 
-    .verify-button {
-      font-size: 14px;
-      padding: 8px 16px;
-    }
+  
 
-    .sidebar-link {
-      font-size: 14px;
-      padding: 6px 14px;
-    }
-
-    .container {
-      padding: 10px;
-    }
-    
-    .buttons-horizontal {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .horizontal-button {
-      margin: 5px 0;
-    }
+  
   }
 
   @media screen and (min-width: 768px) {
@@ -192,7 +179,7 @@
   </div>
   
   <div class="buttons-horizontal">
-    <a href="combinacao.html" class="combination-button sidebar-link horizontal-button">Combinações</a>
+    <a href="combinacao.html" class="combination-button sidebar-link horizontal-button">Jogo das Combinações</a>
   </div>
      
   
