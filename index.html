@@ -98,6 +98,25 @@
     text-decoration: underline;
   }
 
+  .combination-button {
+    background-color: #d4276f;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .combination-button:hover {
+    background-color: #c01f62;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
   @media screen and (max-width: 768px) {
     .header {
       margin-top: 40px;
@@ -173,7 +192,8 @@
   </div>
   
   <div class="buttons-horizontal">
-    <a href="combinacao.html" class="sidebar-link horizontal-button" style="background-color: #d4276f;">Combinações</a>
+    <a href="combinacao.html" class="combination-button sidebar-link horizontal-button">Combinações</a>
+  </div>
      
   
   
