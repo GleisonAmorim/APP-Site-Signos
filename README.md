@@ -42,8 +42,18 @@ link do site: https://site-signos.vercel.app/index.html
 ![Captura de tela 2023-08-21 183501](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/c8a89fbc-23b0-4cec-bf40-ab8239bd35e8)
 
 
-22/08/2023 todas as páginas foram transformadas em responsivas, incluí um botão "Mensagem Especial" dentro de cada página de cada signo, irá sortear mensagens de sorte e motivação para o signo escolhido. Finalizo aqui este projeto. Retirei a página sobre, pois já existe meu linkedin no rodapé.
+22/08/2023 todas as páginas foram transformadas em responsivas, incluí um botão "Mensagem Especial" dentro de cada página de cada signo, irá sortear mensagens de sorte e motivação para o signo escolhido. Retirei a página sobre, pois já existe meu linkedin no rodapé.
 
 ![Captura de tela 2023-08-22 132020](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/235ad49a-19f1-418b-8b83-855aa424cbf6)
+
+23/08/2023 Correção do cabeçalho para dispositivos móveis, em algumas paginas o h1 estava sob os botões de gerar mensagem do dia e botão voltar. Alteração do botão "Jogo das Combinações" agora ele pulsa e tem um design diferente. 
+
+![Captura de tela 2023-08-23 090422](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/d829e558-47bd-423e-9e0b-268ae4fc0bf1)
+
+
+Próximo passo: Transformar o site em um APP - Continua em um projeto futuro!
+
+
+
 
 
