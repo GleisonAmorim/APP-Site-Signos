@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     background-image: url("https://i.postimg.cc/0jSkXrPg/Apresenta-o-de-Persona-do-Usu-rio-Ilustrada-Preto-Roxo-Neon-Verde-1.gif");
     background-size: cover;
     color: #fff;
@@ -19,9 +19,9 @@
     text-align: center;
     margin-top: 20px;
     font-family: 'Pacifico', cursive;
-    font-size: 36px;
+    font-size: 28px;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
   }
 
   .container {
@@ -31,11 +31,11 @@
     justify-content: center;
     padding: 20px;
     box-sizing: border-box;
-    text-align: center;
   }
 
   .verify-container {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   .verify-button {
@@ -43,10 +43,10 @@
     color: #fff;
     border: none;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    padding: 12px 24px;
+    padding: 10px 20px;
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
 
@@ -59,30 +59,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .sidebar-link {
     color: #fff;
     text-decoration: none;
-    padding: 10px;
-    margin: 10px;
+    padding: 8px;
+    margin: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     border: 2px solid #fff;
     border-radius: 5px;
-    font-weight: bold;
-    letter-spacing: 1px;
   }
 
   .sidebar-link:hover {
     background-color: #7c2caa;
-    transform: scale(1.05);
+    transform: translateX(5px);
   }
 
   footer {
     text-align: center;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 1px;
+    margin-top: 2px; /* Adicionei um margin-top para controlar a altura */
     background-color: rgba(241, 241, 241, 0.5);
     color: #000;
     border-radius: 5px;
@@ -106,13 +104,13 @@
     color: #fff;
     border: none;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    padding: 12px 24px;
+    padding: 10px 20px;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: pulse 2s infinite;
+    animation: pulse 2s infinite; /* Adiciona a animação de pulsação */
   }
 
   @keyframes pulse {
@@ -123,11 +121,27 @@
       transform: scale(1.05);
     }
   }
-  
+
   .combination-button:hover {
     background-color: #c01f62;
     transform: scale(1.05);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
+ 
+
+  @media screen and (min-width: 768px) {
+    .buttons-horizontal {
+      display: flex;
+      justify-content: space-between;
+      max-width: 500px;
+      margin-top: 20px;
+    }
+
+    .horizontal-button {
+      flex: 1;
+      margin: 0 5px;
+    }
   }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
