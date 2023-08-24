@@ -281,18 +281,16 @@
  
   margin-top: 40px; /* Ajuste conforme necessário */
   }
-}
+
   </style>
   
-</head>
-<body>
-        <div class="background-container"></div>
-        <div class="container">
-          <h1>Jogo de Combinações de Signos</h1>
-          <div class="button-container">
-            <div>
-              <label for="sign1">Selecione o primeiro signo:</label>
-              <select id="sign1">
+  <div class="background-container"></div>
+  <div class="container">
+    <h1>Jogo de Combinações de Signos</h1>
+    <div class="button-container">
+      <div>
+        <label for="sign1">Selecione o primeiro signo:</label>
+        <select id="sign1">
           <option value="aries">Áries</option>
           <option value="touro">Touro</option>
           <option value="gemeos">Gêmeos</option>
@@ -307,11 +305,10 @@
           <option value="peixes">Peixes</option> 
         </select>
         <br></br>
-    
-</div>
-<div>
-  <label for="sign2">Selecione o segundo signo:</label>
-  <select id="sign2">
+      </div>
+      <div>
+        <label for="sign2">Selecione o segundo signo:</label>
+        <select id="sign2">
           <option value="aries">Áries</option>
           <option value="touro">Touro</option>
           <option value="gemeos">Gêmeos</option>
@@ -326,62 +323,38 @@
           <option value="peixes">Peixes</option> 
         </select>
         <br></br>
+      </div>
     </div>
-  </div>
-  <div class="button-container">
-    <button class="button pulse" onclick="calculateCompatibility()">Verificar Compatibilidade</button>
-    <br></br>
-    <div class="emojis" id="emojis"></div>
-  </div>
-  <div class="thermometer-container">
-    <div class="thermometer">
-      <div class="mercury" id="mercury"></div>
+    <div class="button-container">
+      <button class="button pulse" id="calculateButton">Verificar Compatibilidade</button>
+      <br></br>
+      <div class="emojis" id="emojis"></div>
     </div>
-    <div class="percentage" id="percentage">0%</div>
+    <div class="thermometer-container">
+      <div class="thermometer">
+        <div class="mercury" id="mercury"></div>
+      </div>
+      <div class="percentage" id="percentage">0%</div>
+    </div>
+    <div class="compatibility-summary" id="compatibilitySummary"></div>
   </div>
-  <div class="compatibility-summary" id="compatibilitySummary"></div>
-</div>
-
-<button class="back-button" onclick="window.location.href='index.html'">Voltar</button>
+  <button class="back-button" onclick="window.location.href='index.html'">Voltar</button>
+  
 <script>
     const compatibilityTable = {
-      aries: {
-        touro: 60, gemeos: 85, cancer: 40, leao: 95, virgem: 55, libra: 70, escorpiao: 30, sagitario: 90, capricornio: 75, aquario: 45, peixes: 50,
-      },
-      touro: {
-        gemeos: 65, cancer: 80, leao: 50, virgem: 90, libra: 55, escorpiao: 70, sagitario: 40, capricornio: 95, aquario: 45, peixes: 75, aries: 30,
-      },
-      gemeos: {
-        cancer: 75, leao: 60, virgem: 80, libra: 70, escorpiao: 50, sagitario: 85, capricornio: 45, aquario: 90, peixes: 40, aries: 55, touro: 65,
-      },
-      cancer: {
-        leao: 70, virgem: 60, libra: 75, escorpiao: 80, sagitario: 55, capricornio: 90, aquario: 40, peixes: 85, aries: 50, touro: 75, gemeos: 65,
-      },
-      leao: {
-        virgem: 50, libra: 75, escorpiao: 80, sagitario: 90, capricornio: 65, aquario: 55, peixes: 70, aries: 95, touro: 30, gemeos: 40, cancer: 60,
-      },
-      virgem: {
-        libra: 60, escorpiao: 70, sagitario: 45, capricornio: 80, aquario: 75, peixes: 85, aries: 55, touro: 90, gemeos: 80, cancer: 60, leao: 50,
-      },
-      libra: {
-        escorpiao: 70, sagitario: 80, capricornio: 55, aquario: 90, peixes: 75, aries: 60, touro: 55, gemeos: 70, cancer: 75, leao: 85, virgem: 45,
-      },
-      escorpiao: {
-        sagitario: 75, capricornio: 90, aquario: 60, peixes: 80, aries: 30, touro: 70, gemeos: 50, cancer: 80, leao: 80, virgem: 70, libra: 60,
-      },
-      sagitario: {
-        capricornio: 70, aquario: 85, peixes: 60, aries: 90, touro: 40, gemeos: 75, cancer: 55, leao: 90, virgem: 45, libra: 75, escorpiao: 70,
-      },
-      capricornio: {
-        aquario: 70, peixes: 80, aries: 75, touro: 95, gemeos: 45, cancer: 90, leao: 65, virgem: 80, libra: 55, escorpiao: 85, sagitario: 70,
-      },
-      aquario: {
-        peixes: 70, aries: 45, touro: 45, gemeos: 90, cancer: 40, leao: 55, virgem: 75, libra: 90, escorpiao: 60, sagitario: 85, capricornio: 70,
-      },
-      peixes: {
-        aries: 40, touro: 75, gemeos: 40, cancer: 85, leao: 70, virgem: 85, libra: 75, escorpiao: 80, sagitario: 60, capricornio: 80, aquario: 70,
-      },
-    };
+  aries: { touro: 60, gemeos: 85, cancer: 40, leao: 95, virgem: 55, libra: 70, escorpiao: 30, sagitario: 90, capricornio: 75, aquario: 45, peixes: 50 },
+  touro: { gemeos: 65, cancer: 80, leao: 50, virgem: 90, libra: 55, escorpiao: 70, sagitario: 40, capricornio: 95, aquario: 45, peixes: 75, aries: 30 },
+  gemeos: { cancer: 75, leao: 60, virgem: 80, libra: 70, escorpiao: 50, sagitario: 85, capricornio: 45, aquario: 90, peixes: 40, aries: 55, touro: 65 },
+  cancer: { leao: 70, virgem: 60, libra: 75, escorpiao: 80, sagitario: 55, capricornio: 90, aquario: 40, peixes: 85, aries: 50, touro: 75, gemeos: 65 },
+  leao: { virgem: 50, libra: 75, escorpiao: 80, sagitario: 90, capricornio: 65, aquario: 55, peixes: 70, aries: 95, touro: 30, gemeos: 40, cancer: 60 },
+  virgem: { libra: 60, escorpiao: 70, sagitario: 45, capricornio: 80, aquario: 75, peixes: 85, aries: 55, touro: 90, gemeos: 80, cancer: 60, leao: 50 },
+  libra: { escorpiao: 70, sagitario: 80, capricornio: 55, aquario: 90, peixes: 75, aries: 60, touro: 55, gemeos: 70, cancer: 75, leao: 85, virgem: 45 },
+  escorpiao: { sagitario: 75, capricornio: 90, aquario: 60, peixes: 80, aries: 30, touro: 70, gemeos: 50, cancer: 80, leao: 80, virgem: 70, libra: 60 },
+  sagitario: { capricornio: 70, aquario: 85, peixes: 60, aries: 90, touro: 40, gemeos: 75, cancer: 55, leao: 90, virgem: 45, libra: 75, escorpiao: 70 },
+  capricornio: { aquario: 70, peixes: 80, aries: 75, touro: 95, gemeos: 45, cancer: 90, leao: 65, virgem: 80, libra: 55, escorpiao: 85, sagitario: 70 },
+  aquario: { peixes: 70, aries: 45, touro: 45, gemeos: 90, cancer: 40, leao: 55, virgem: 75, libra: 90, escorpiao: 60, sagitario: 85, capricornio: 70 },
+  peixes: { aries: 40, touro: 75, gemeos: 40, cancer: 85, leao: 70, virgem: 85, libra: 75, escorpiao: 80, sagitario: 60, capricornio: 80, aquario: 70 }
+};
 
     const signCharacteristics = {
       aries: "Áries é o primeiro signo do zodíaco e é conhecido por sua energia, entusiasmo e coragem. Eles têm uma natureza impulsiva e tendem a ser líderes naturais.",
@@ -398,77 +371,99 @@
       peixes: "Peixes é um signo sensitivo e empático. São intuitivos e muitas vezes têm uma conexão espiritual. Têm uma natureza criativa e podem ser sonhadores.",
     };
 
-    function calculateCompatibility() {
-      const sign1 = document.getElementById("sign1").value;
-      const sign2 = document.getElementById("sign2").value;
-      const emojis = document.getElementById("emojis");
-  emojis.style.opacity = 1;
+    function calculateCompatibility(sign1, sign2) {
+  const compatibility1to2 = compatibilityTable[sign1][sign2];
+  const compatibility2to1 = compatibilityTable[sign2][sign1];
 
-      // Verificar compatibilidade e atualizar elementos
-      if (sign1 === sign2) {
-        updateCompatibility(100, sign1, sign2);
-      } else if (compatibilityTable[sign1] && compatibilityTable[sign1][sign2] !== undefined) {
-        const compatibilityPercentage = compatibilityTable[sign1][sign2];
-        updateCompatibility(compatibilityPercentage, sign1, sign2);
-      } else {
-        updateCompatibility("Compatibilidade desconhecida", sign1, sign2);
-      }
-    }
+  const avgCompatibility = (compatibility1to2 + compatibility2to1) / 2;
+  return avgCompatibility;
+}
 
-    function updateCompatibility(compatibility, sign1, sign2) {
-    const mercury = document.getElementById("mercury");
-    const emojis = document.getElementById("emojis");
-    const percentage = document.getElementById("percentage");
-    const compatibilitySummary = document.getElementById("compatibilitySummary");
-
-    if (typeof compatibility === "number") {
-      // Definir a cor da barra de mercúrio com base nas porcentagens
-      if (compatibility <= 25) {
-        mercury.style.backgroundColor = "#e74c3c"; // Vermelho
-      } else if (compatibility <= 50) {
-        mercury.style.backgroundColor = "#f39c12"; // Amarelo
-      } else {
-        mercury.style.backgroundColor = "#2ecc71"; // Verde
-      }
-
-      mercury.style.height = `${compatibility}%`;
-      emojis.innerHTML = getEmojisForCompatibility(compatibility);
-      percentage.textContent = `${compatibility}% de compatibilidade`;
-      compatibilitySummary.textContent = getCompatibilitySummary(sign1, sign2, compatibility);
-    } else {
-      mercury.style.height = "0%";
-      mercury.style.backgroundColor = "#ddd"; // Cor padrão
-      emojis.innerHTML = "";
-      percentage.textContent = compatibility;
-      compatibilitySummary.textContent = "";
-    }
-
-    // Ocultar emojis após 5 segundos
-    setTimeout(() => {
-      emojis.style.opacity = 0;
-    }, 5000);
+function calculateCompatibility(sign1, sign2) {
+  if (sign1 === sign2) {
+    return 100;
   }
 
-    function getEmojisForCompatibility(percentage) {
-      if (percentage < 30) {
-        return "😢💔😬";
-      } else if (percentage < 70) {
-        return "😐🤔😐";
-      } else {
-        return "😍❤️😄";
-      }
-    }
+  const compatibility1to2 = compatibilityTable[sign1][sign2];
+  const compatibility2to1 = compatibilityTable[sign2][sign1];
 
-    function getCompatibilitySummary(sign1, sign2, percentage) {
-      if (percentage < 30) {
-        return `A compatibilidade entre ${sign1} e ${sign2} pode ser desafiadora. ${signCharacteristics[sign1]} ${signCharacteristics[sign2]}`;
-      } else if (percentage < 70) {
-        return `A compatibilidade entre ${sign1} e ${sign2} é moderada. ${signCharacteristics[sign1]} ${signCharacteristics[sign2]}`;
-      } else {
-        return `A compatibilidade entre ${sign1} e ${sign2} é excelente! ${signCharacteristics[sign1]} ${signCharacteristics[sign2]}`;
-      }
-    }
-  </script>
+  const avgCompatibility = (compatibility1to2 + compatibility2to1) / 2;
+  return avgCompatibility;
+}
+
+function getEmojisForCompatibility(percentage) {
+  if (percentage < 30) {
+    return "😢💔😬";
+  } else if (percentage < 70) {
+    return "😐🤔😐";
+  } else {
+    return "😍❤️😄";
+  }
+}
+
+function getColorForCompatibility(percentage) {
+  if (percentage <= 25) {
+    return "#e74c3c"; // Vermelho
+  } else if (percentage <= 50) {
+    return "#f39c12"; // Amarelo
+  } else {
+    return "#2ecc71"; // Verde
+  }
+}
+
+function getCompatibilitySummary(sign1, sign2, percentage) {
+  if (percentage < 30) {
+    return `A compatibilidade entre ${sign1} e ${sign2} pode ser desafiadora. ${signCharacteristics[sign1]} ${signCharacteristics[sign2]}`;
+  } else if (percentage < 70) {
+    return `A compatibilidade entre ${sign1} e ${sign2} é moderada. ${signCharacteristics[sign1]} ${signCharacteristics[sign2]}`;
+  } else {
+    return `A compatibilidade entre ${sign1} e ${sign2} é excelente! ${signCharacteristics[sign1]} ${signCharacteristics[sign2]}`;
+  }
+}
+
+function updateCompatibility(sign1, sign2) {
+  const compatibilityPercentage = calculateCompatibility(sign1, sign2);
+  const emojis = getEmojisForCompatibility(compatibilityPercentage);
+
+  console.log(`Compatibilidade entre ${sign1} e ${sign2}: ${compatibilityPercentage}%`);
+  console.log(`Emojis: ${emojis}`);
+
+  const mercury = document.getElementById("mercury");
+  const emojisElement = document.getElementById("emojis");
+  const percentageElement = document.getElementById("percentage");
+  const compatibilitySummaryElement = document.getElementById("compatibilitySummary");
+
+  if (typeof compatibilityPercentage === "number") {
+    const mercuryHeight = Math.min(compatibilityPercentage, 100);
+    const color = getColorForCompatibility(compatibilityPercentage);
+
+    mercury.style.backgroundColor = color;
+    mercury.style.height = `${mercuryHeight}%`;
+    emojisElement.innerHTML = getEmojisForCompatibility(compatibilityPercentage);
+    percentageElement.textContent = `${compatibilityPercentage}% de compatibilidade`;
+    compatibilitySummaryElement.textContent = getCompatibilitySummary(sign1, sign2, compatibilityPercentage);
+  } else {
+    mercury.style.backgroundColor = "#ddd";
+    mercury.style.height = "0%";
+    emojisElement.innerHTML = "";
+    percentageElement.textContent = compatibilityPercentage;
+    compatibilitySummaryElement.textContent = "";
+  }
+
+  setTimeout(() => {
+    emojisElement.style.opacity = 0;
+  }, 5000);
+}
+
+function calculateAndShowCompatibility() {
+  const sign1 = document.getElementById("sign1").value;
+  const sign2 = document.getElementById("sign2").value;
+  updateCompatibility(sign1, sign2);
+}
+
+// Ligando a função calculateAndShowCompatibility ao botão de Verificar Compatibilidade
+document.getElementById("calculateButton").addEventListener("click", calculateAndShowCompatibility);
+</script>
   <br></br>
   <br></br>
   <br></br>
