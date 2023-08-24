@@ -6,24 +6,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url("https://i.postimg.cc/0jSkXrPg/Apresenta-o-de-Persona-do-Usu-rio-Ilustrada-Preto-Roxo-Neon-Verde-1.gif");
     background-size: cover;
     color: #fff;
     margin: 0;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-    min-height: 100vh;
   }
 
   .header {
     text-align: center;
     margin-top: 20px;
     font-family: 'Pacifico', cursive;
-    font-size: 28px;
+    font-size: 36px;
     color: #fff;
-    padding: 10px;
+    padding: 20px;
   }
 
   .container {
@@ -33,11 +31,11 @@
     justify-content: center;
     padding: 20px;
     box-sizing: border-box;
+    text-align: center;
   }
 
   .verify-container {
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 30px;
   }
 
   .verify-button {
@@ -45,10 +43,10 @@
     color: #fff;
     border: none;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 12px 24px;
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
 
@@ -61,46 +59,46 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .sidebar-link {
     color: #fff;
     text-decoration: none;
-    padding: 8px;
-    margin: 5px;
+    padding: 10px;
+    margin: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     border: 2px solid #fff;
     border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
   }
 
   .sidebar-link:hover {
     background-color: #7c2caa;
-    transform: translateX(5px);
+    transform: scale(1.05);
   }
 
   footer {
     text-align: center;
-    padding: 1px 0;
-    background-color: #2f3640;
-    color: #fff;
-    position: absolute;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgba(241, 241, 241, 0.5);
+    color: #000;
+    border-radius: 5px;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
   }
 
-
   footer a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-    transition: color 0.3s ease;
   }
 
   footer a:hover {
-    color: #c0392b;
+    text-decoration: underline;
   }
 
   .combination-button {
@@ -108,19 +106,13 @@
     color: #fff;
     border: none;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 12px 24px;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     animation: pulse 2s infinite;
-  }
-
-  .combination-button:hover {
-    background-color: #c01f62;
-    transform: scale(1.05);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   }
 
   @keyframes pulse {
@@ -131,21 +123,12 @@
       transform: scale(1.05);
     }
   }
-
-  @media screen and (min-width: 768px) {
-    .buttons-horizontal {
-      display: flex;
-      justify-content: space-between;
-      max-width: 500px;
-      margin-top: 20px;
-    }
-
-    .horizontal-button {
-      flex: 1;
-      margin: 0 5px;
-    }
+  
+  .combination-button:hover {
+    background-color: #c01f62;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   }
-</style>
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
@@ -157,7 +140,8 @@
     <p>Informe sua data de nascimento:</p>
     <input type="date" id="birthdate">
     <button class="verify-button" onclick="verifySign()">Verificar</button>
-    <br><br>
+<br></br>
+    <br></br>
     <div class="balloon text-center" id="signBalloon"></div>
   </div>
   <div class="signs-container">
