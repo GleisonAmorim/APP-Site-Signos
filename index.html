@@ -78,6 +78,7 @@
   }
 
   footer {
+    display: none;
     text-align: center;
     padding: 1px;
     margin-top: 2px; /* Adicionei um margin-top para controlar a altura */
@@ -184,8 +185,7 @@
 
  
 <footer>
-    
-   
+ <footer id="page-footer">    
 <p>Me conheça no <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">LinkedIn</a></p>
 <p>Baixe o aplicativo: <a href="https://drive.google.com/file/d/1cbDHcwmhB1ps0mRmGV7CUvXvKz4zXSMw/view?ts=64e607d2" target="_blank">Clique aqui</a></p>
 <p><a href="creditos.html" target="_blank">Agradecimentos</a></p>
@@ -236,6 +236,16 @@
         balloon.classList.remove("show");
       }, 5000);
     }
+   function checkScroll() {
+    var footer = document.getElementById("page-footer");
+    var scrollPosition = window.scrollY || window.pageYOffset;
+
+    if (scrollPosition > 0) {
+      footer.style.display = "block"; // Mostra o rodapé
+    } else {
+      footer.style.display = "none"; // Oculta o rodapé
+    }
+  }
   </script>
   <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
