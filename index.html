@@ -144,7 +144,7 @@
       margin: 0 5px;
     }
 
-    #download-button {
+   #download-button {
     margin: 10px auto;
     border-radius: 5px;
     padding: 10px 20px;
@@ -154,6 +154,8 @@
     color: #fff;
     border: none;
     font-weight: bold;
+    text-decoration: none; /* Remove sublinhado */
+    display: inline-block; /* Para ocupar somente o espaço necessário */
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
 
@@ -161,6 +163,11 @@
     background-color: #c01f62;
     transform: scale(1.05);
   }
+
+     @media screen and (max-width: 767px) {
+    #download-button {
+      width: 100%; /* Ocupa a largura total no celular */
+    }
   }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
