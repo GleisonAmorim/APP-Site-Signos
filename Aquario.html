@@ -79,27 +79,38 @@
       background-color: #663399;
     }
 
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: rgba(240, 240, 240, 0.8);
-      color: #000;
-      border-radius: 10px;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0.9;
-    }
+   footer {
+   
+    text-align: center;
+    padding: 1px;
+    margin-top: 2px; /* Adicionei um margin-top para controlar a altura */
+    background-color: rgba(241, 241, 241, 0.5);
+    color: #000;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Certifique-se de que o footer esteja em um nível superior */
+}
+  }
 
-    footer a {
-      color: #000;
-      text-decoration: none;
-    }
+  .footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 
     .images-container {
       display: flex;
@@ -239,9 +250,14 @@
     <p id="fortuneMessage">Clique no botão para obter uma mensagem especial.</p>
   </div>
 
-  <footer>
-    <p>Me conheça no <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">LinkedIn</a></p>
-  </footer>
+ <footer>
+  <footer class="footer">
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">Me conheça no LinkedIn</a>
+    <span class="separator">|</span>
+    <a href="https://drive.google.com/file/d/1zgNLnZVdlBxYTsSKZuJH926G-nWGuZbC/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Baixar App</a>
+  </div>
+</footer>
 
   <script>
     function showFortunePopup() {
