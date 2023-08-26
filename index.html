@@ -145,30 +145,29 @@
     }
 
    #download-button {
-    margin: 10px auto;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    font-weight: bold;
-    text-decoration: none; /* Remove sublinhado */
-    display: inline-block; /* Para ocupar somente o espaço necessário */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-  #download-button:hover {
-    background-color: #c01f62;
-    transform: scale(1.05);
+@media screen and (max-width: 767px) {
+  #download-button {
+    position: static;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
   }
-
-     @media screen and (max-width: 767px) {
-    #download-button {
-      width: 100%; /* Ocupa a largura total no celular */
-    }
-  }
+}
     
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
