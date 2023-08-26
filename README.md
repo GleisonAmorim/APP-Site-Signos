@@ -62,12 +62,6 @@ Baixe este app: https://drive.google.com/file/d/1cbDHcwmhB1ps0mRmGV7CUvXvKz4zXSM
 
 26/08/2023 A partir de hoje consigo rastrear o tráfego, implementei o seguinte código abaixo em todas as páginas html com ajuda da Vercel, onde o site está hospedado.
 Somente a partir de agora consigo ver o historico de utilização do site/app a partir de 26/08/2023.
-Código utilizado:
-
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
 
 Análise:
 
