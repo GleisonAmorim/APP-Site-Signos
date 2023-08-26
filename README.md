@@ -35,7 +35,7 @@ link do site: https://site-signos.vercel.app/index.html
 ![Captura de tela 2023-08-08 142357](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/802d7bb3-f855-4de3-bb10-a7cbce2ac297)
 ![Captura de tela 2023-08-08 142336](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/2697dd7e-593a-48c8-9aec-4ca9eac42d05)
 ![Captura de tela 2023-08-08 141515](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/62565377-21dc-48f8-849a-354acc7f3917)
-
+  
 
 21/08/20223 Atualização da home page, agora é possível acessar pelo celular, deixei a page responsiva mudei o tema. Retirei o botão sorte do dia, que será inserido futuramente dentro da página de cada signo também falta a alteração responsiva nas outras pages
 
