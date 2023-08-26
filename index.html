@@ -198,7 +198,7 @@
 </footer>
 
 <script>
- function verifySign() {
+function verifySign() {
   var birthdate = new Date(document.getElementById("birthdate").value);
   var month = birthdate.getMonth() + 1;
   var day = birthdate.getDate();
@@ -222,10 +222,10 @@
     sign = "Escorpião: de 23 de outubro a 21 de novembro";
   } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
     sign = "Sagitário: de 22 de novembro a 21 de dezembro";
-  } else if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
-    sign = "Capricórnio: de 22 de dezembro a 19 de janeiro";
-  } else if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
-    sign = "Aquário: de 20 de janeiro a 18 de fevereiro";
+  } else if ((month == 12 && day >= 22) || (month == 1 && day <= 20)) {
+    sign = "Capricórnio: de 22 de dezembro a 20 de janeiro";
+  } else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {
+    sign = "Aquário: de 21 de janeiro a 18 de fevereiro";
   } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
     sign = "Peixes: de 19 de fevereiro a 20 de março";
   }
