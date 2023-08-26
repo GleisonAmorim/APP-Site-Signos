@@ -60,3 +60,13 @@ Baixe este app: https://drive.google.com/file/d/1cbDHcwmhB1ps0mRmGV7CUvXvKz4zXSM
 
 24/08/2023 Correção do código java estava dando valores diferentes para entradas iguais se fosse feito ao contrário, realizei o ajuste e dei ids para os signos. Também foi realizada a correção a escolha de signos iguais, agora vai de acordo com a característica, ou seja, signos iguais 100% de compatibilidade.
 
+26/08/2023 A partir de hoje consigo rastrear o tráfego, implementei o seguinte código abaixo no meu index com ajuda da Vercel, onde o site está hospedado.
+Somente a partir de agora consigo ver o historico de utilização do site/app a partir de 26/08/2023.
+------------------////
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+////------------------------------
+
+
