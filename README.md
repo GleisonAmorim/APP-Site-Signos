@@ -69,5 +69,8 @@ Código utilizado:
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
 
+Análise:
+
+![Captura de tela 2023-08-26 104001](https://github.com/GleisonAmorim/APP-Site-Signos/assets/54336609/d2d77c6c-85c0-4b12-97ce-bca5282feb8c)
 
 
