@@ -144,10 +144,8 @@
       margin: 0 5px;
     }
 
-   #download-button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+#download-button {
+  margin: 10px;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 16px;
@@ -157,24 +155,23 @@
   border: none;
   font-weight: bold;
   text-decoration: none;
+  display: inline-block;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.top-left {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+#download-button:hover {
+  background-color: #c01f62;
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 767px) {
-  .top-left {
-    position: static;
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
+  #download-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    margin: 0;
   }
 }
-    
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
@@ -189,7 +186,7 @@
     <br></br>
     <div class="balloon text-center" id="signBalloon"></div>
   </div>
-  <a id="download-button" class="top-left" href="https://drive.google.com/file/d/1zgNLnZVdlBxYTsSKZuJH926G-nWGuZbC/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Baixar App</a>
+ <a id="download-button" class="top-left" href="https://drive.google.com/file/d/1zgNLnZVdlBxYTsSKZuJH926G-nWGuZbC/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Baixar App</a>
   <div class="signs-container">
     <a href="aries.html" class="sidebar-link" style="background-color: #e74c3c;">Áries</a>
     <a href="touro.html" class="sidebar-link" style="background-color: #f39c12;">Touro</a>
