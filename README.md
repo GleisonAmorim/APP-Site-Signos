@@ -51,7 +51,7 @@ link do site: https://site-signos.vercel.app/index.html
 ![Captura de tela 2023-08-23 090422](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/d829e558-47bd-423e-9e0b-268ae4fc0bf1)
 
 
-Próximo passo: Transformar o site em um APP - Continua em um projeto futuro!
+Próximo passo: Transformar o site em um APP.
 
 23/08/2023 utilizando o WEBSITE 2 APK BUILDER convertí meu site para um app, parece funcionar tudo ok! Não consegui publicar na play store ainda, mas futuramente vou publicar 
 
