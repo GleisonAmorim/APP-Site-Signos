@@ -99,6 +99,21 @@
   footer a:hover {
     text-decoration: underline;
   }
+  .footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
 
   .combination-button {
     background-color: #d4276f;
@@ -178,9 +193,11 @@
   </div>  
 </div> 
 <footer>
-  <p>Me conheça no <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">LinkedIn</a></p>
-    <a id="download-button" class="top-left" href="https://drive.google.com/file/d/1zgNLnZVdlBxYTsSKZuJH926G-nWGuZbC/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Baixar App</a>
-  </footer>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">Me conheça no LinkedIn</a>
+    <a href="https://drive.google.com/file/d/1zgNLnZVdlBxYTsSKZuJH926G-nWGuZbC/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Baixar App</a>
+  </div>
+</footer>
 
 <script>
   function verifySign() {
