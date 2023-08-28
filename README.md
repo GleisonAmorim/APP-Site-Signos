@@ -11,13 +11,9 @@ Exploração aprofundada dos 12 signos do zodíaco.
 Páginas interativas com informações e ilustrações únicas para cada signo.
 Experiência do usuário aprimorada por meio de design e funcionalidades avançadas
 
-
 Espero que este projeto inspire outros entusiastas da programação e design a explorar novas possibilidades. A jornada de aprendizado foi incrível e estou ansioso(a) para receber feedback da comunidade.
 
-#Programação #Design #DesenvolvimentoWeb #AprendizadoConstante #Criatividade #Tecnologia
-
 link do site: https://site-signos.vercel.app/index.html
-
 
 ![Captura de tela 2023-08-08 143013](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/c8cb52ed-0c90-4f0b-9543-25ef869c916a)
 ![Captura de tela 2023-08-08 142859](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/d020b62e-3838-448a-a69c-10c9aa893bd5)
@@ -65,8 +61,7 @@ Somente a partir de agora consigo ver o historico de utilização do site/app a 
 
 Análise:
 
-![Captura de tela 2023-08-26 104001](https://github.com/GleisonAmorim/APP-Site-Signos/assets/54336609/07cd745d-50b8-46d5-a8ca-5361231544f4) 
-
+![Captura de tela 2023-08-26 104001](https://github.com/GleisonAmorim/APP-Site-Signos/assets/54336609/07cd745d-50b8-46d5-a8ca-5361231544f4)
 
 
 
