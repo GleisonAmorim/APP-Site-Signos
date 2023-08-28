@@ -65,7 +65,7 @@ Somente a partir de agora consigo ver o historico de utilização do site/app a 
 
 Análise:
 
-![Captura de tela 2023-08-26 104001](https://github.com/GleisonAmorim/APP-Site-Signos/assets/54336609/07cd745d-50b8-46d5-a8ca-5361231544f4)
+![Captura de tela 2023-08-26 104001](https://github.com/GleisonAmorim/APP-Site-Signos/assets/54336609/07cd745d-50b8-46d5-a8ca-5361231544f4) 
 
 
 
