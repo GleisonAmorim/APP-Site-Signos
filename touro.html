@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signo de Touro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .background-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url("https://i.postimg.cc/3N1MSkLR/Frasco-para-viagem-17.gif");
+     background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* Background fixo ao rolar a página */
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+
+    h1 {
+      color: #000000;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: #000000;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 150px;
+    }
+
+    .characteristics {
+      margin-top: 20px;
+    }
+
+    .characteristics h2 {
+      color: #000000;
+      margin-bottom: 10px;
+    }
+
+    .characteristics p {
+      margin-bottom: 15px;
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 40px;
+      left: 40px;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #8E44AD;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      z-index: 1;
+    }
+
+    .back-btn .arrow {
+      margin-right: 5px;
+    }
+
+    .back-btn:hover {
+      background-color: #663399;
+    }
+
+   footer {
+   
+    text-align: center;
+    padding: 1px;
+    margin-top: 2px; /* Adicionei um margin-top para controlar a altura */
+    background-color: rgba(241, 241, 241, 0.5);
+    color: #000;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Certifique-se de que o footer esteja em um nível superior */
+}
+  }
+
+  .footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+    .images-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .symbol img,
+    .tattoo img {
+      width: 100%;
+      max-width: 300px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .symbol,
+    .tattoo {
+      width: 100%;
+    }
+    .floating-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #a111b4;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+      font-size: 12px;
+      line-height: 1.2;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+      overflow: hidden;
+    }
+
+    
+
+    .floating-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+    .floating-button:before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 8px;
+      background: linear-gradient(to bottom, #ec0666, #d30516);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.2s ease;
+    }
+
+    /* Estilos para o texto dentro do botão */
+    .button-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    /* Estilos para a mensagem de sorte */
+    .fortune-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 300px;
+      background-color: rgba(207, 11, 214, 0.9);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      display: none;
+    }
+    .floating-button:hover:before {
+      opacity: 1;
+    }
+    .fortune-popup h3 {
+      margin-top: 0;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #999;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-container"></div>
+  <div class="container">
+    <h1>Signo de Touro</h1>
+    <a class="back-btn" href="index.html"><span class="arrow">&#8592;</span></a>
+    <div class="characteristics">
+      <h2>Sobre o signo de Touro:</h2>
+      <p>Touro é o segundo signo do zodíaco e está associado ao período de 21 de abril a 20 de maio. É regido por Vênus e é considerado um signo do elemento Terra, o que o torna prático, estável e voltado para a materialidade. Os taurinos são conhecidos por sua determinação e apreciação pela beleza e conforto.</p>
+    </div>
+    <div class="characteristics">
+      <h2>Características principais de Touro:</h2>
+      <ul>
+        <li>Determinação: Os taurinos são persistentes e não desistem facilmente.</li>
+        <li>Estabilidade: Eles valorizam a estabilidade e a segurança em suas vidas.</li>
+        <li>Sentido estético: Touro aprecia a beleza e tende a ter um olhar artístico.</li>
+        <li>Materialismo: Eles se preocupam com as coisas materiais e desfrutam de conforto.</li>
+        <li>Teimosia: Touro pode ser teimoso e resistente a mudanças.</li>
+        <li>Lealdade: Eles são leais e confiáveis em seus relacionamentos.</li>
+        <li>Prazer: Taurinos gostam de desfrutar de prazeres sensoriais.</li>
+      </ul>
+    </div>
+    <div class="images-container">
+      <div class="symbol">
+        <h2>Símbolo de Touro</h2>
+        <img src="https://img.nsctotal.com.br/wp-content/uploads/2022/10/Signo-de-Touro-shutterstock_1-1-768x576.jpg" alt="Símbolo de Touro">
+      </div>
+    </div>
+    <div class="images-container">
+      <div class="tattoo">
+        <h2>Ideia para tatuagem de Touro</h2>
+        <img src="https://staticr1.blastingcdn.com/media/photogallery/2017/12/15/660x290/b_502x220x82/nao-tem-como-escapar-do-charme-de-touro_1735633.webp" alt="Tatuagem de Touro">
+      </div>
+    </div>
+  </div>
+   <button class="floating-button" id="fortuneButton">Mensagem Especial</button>
+  <span class="button-text">Mensagem Especial</span>
+</button>
+
+<div class="fortune-popup" id="fortunePopup">
+  <span class="close-btn" onclick="closeFortunePopup()">&times;</span>
+  
+
+  <p id="fortuneMessage">Clique no botão para obter uma mensagem especial.</p>
+</div>
+
+<footer>
+  <footer class="footer">
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">Me conheça no LinkedIn</a>
+    <span class="separator">|</span>
+    <a href="https://drive.google.com/file/d/1zgNLnZVdlBxYTsSKZuJH926G-nWGuZbC/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Baixar App</a>
+  </div>
+</footer>
+
+<script>
+  function showFortunePopup() {
+    var popup = document.getElementById("fortunePopup");
+    var message = document.getElementById("fortuneMessage");
+    var randomIndex = Math.floor(Math.random() * messages.length);
+    message.textContent = messages[randomIndex];
+    popup.style.display = "block";
+  }
+
+  function closeFortunePopup() {
+    var popup = document.getElementById("fortunePopup");
+    popup.style.display = "none";
+  }
+
+  var messages = [
+
+  "Sua motivação é como uma rocha. Enfrente desafios com firmeza e inspire outros a perseverarem, Touro.",
+"Sua estabilidade é admirável. Mostre como se manter firme em tempos turbulentos e inspirar a confiança.",
+"Você é um construtor de bases sólidas. Demonstre como edificar seus sonhos e inspire outros a construirem suas alicerces.",
+"Sua persistência é uma luz guia. Continue sua jornada com tenacidade e inspire outros a seguirem seus objetivos.",
+"Sua paciência é uma virtude valiosa. Mostre como esperar pelo melhor momento e inspirar outros a praticar a serenidade.",
+"Você é um cultivador de vegetais. Colha os frutos do seu trabalho árduo e inspire outros a perseverarem.",
+"Sua natureza confiável é um farol. Ilumine o caminho para a confiança mútua e inspire relacionamentos sólidos.",
+"Sua força interior é inspiradora. Enfrente desafios com coragem e inspire outros a enfrentarem suas batalhas.",
+"Você é um mestre da perseverança. Supere obstáculos com força e inspire outros a superarem adversidades.",
+"Sua dedicação é contagiante. Demonstre como se dedicar inteiramente e inspirar outros a darem o seu melhor.",
+"Sua firmeza é admirável. Mantenha-se firme em suas convicções e inspire outros a seguirem suas próprias crenças.",
+"Você é um criador de beleza. Transforme ideias em realidade e inspire outros a apreciarem a estética da vida.",
+"Sua atenção aos detalhes é um exemplo. Mostre como pequenos esforços fazem grande diferença e inspire outros a cuidarem dos detalhes.",
+"Sua experiência é imparável. Continue avançando com foco e inspire outros a atingirem seus alvos.",
+"Você é um amante da estabilidade. Demonstre como criar fundamentos sólidos e inspirar outros a buscarem segurança.",
+"Sua resistência é inspiradora. Supere adversidades com resiliência e inspire outros a persistirem em suas metas.",
+"Sua lealdade é um farol. Mostre como ser um apoio constante e inspire conexões duradouras.",
+"Você é um empreendedor incansável. Demonstre como alcançar o sucesso com esforço e inspirar outros a se esforçarem.",
+"Sua calma é contagiante. Mantenha a serenidade em tempos desafiadores e inspire outros a encontrarem a paz.",
+"Sua confiabilidade é admirável. Cumpra suas promessas e inspire outros a protegerem a responsabilidade.",
+"Você é um cultivador de sonhos. Plante sementes de esperança e inspire outros a perseguirem suas aspirações.",
+"Sua perseverança é um exemplo. Enfrente obstáculos com força e inspire outros a persistirem em suas metas.",
+"Sua dedicação é inabalável. Continue sua jornada com comprometimento e inspire outros a alcançarem suas ambições.",
+"Você é um mestre da consistência. Demonstre como manter-se constante e inspirar outros a permanecerem focados.",
+"Sua força interior é inspiradora. Supere dificuldades com coragem e inspire outros a superarem desafios.",
+"Sua paciência é uma virtude rara. Mostre como esperar com graça e inspirar outros a praticarem a serenidade.",
+"Você é um construtor de conquistas. Demonstre como construir passo a passo e inspirar outros a trilharem caminhos sólidos.",
+"Sua persistência é admirável. Enfrente desafios com tenacidade e inspire outros a perseverarem.",
+"Sua poderosa é uma chama interior. Alimente seu fogo de motivação e inspire outros a buscarem suas paixões.",
+"Você é um exemplo de estabilidade. Demonstre como ser um porto seguro e inspire outros a encontrarem equilíbrio, Touro.",
+
+
+  ];
+
+var fortuneButton = document.getElementById("fortuneButton");
+fortuneButton.addEventListener("click", showFortunePopup);
+</script>
+
+  <script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+  
+</body>
+</html>
