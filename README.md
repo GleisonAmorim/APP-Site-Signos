@@ -64,5 +64,5 @@ Análise:
 ![Captura de tela 2023-08-26 104001](https://github.com/GleisonAmorim/APP-Site-Signos/assets/54336609/07cd745d-50b8-46d5-a8ca-5361231544f4)
 
 
-
+02/10/2023 - Separação dos arquivos HTML - JAVA - CSS está em outro repositório
 
