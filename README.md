@@ -13,6 +13,28 @@ Experiência do usuário aprimorada por meio de design e funcionalidades avança
 
 Espero que este projeto inspire outros entusiastas da programação e design a explorar novas possibilidades. A jornada de aprendizado foi incrível e estou ansioso(a) para receber feedback da comunidade.
 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+🌟 Welcome to my project dedicated to zodiac signs! This repository houses the source code and resources used in creating my interactive website about zodiac signs.
+
+Technologies Used:
+
+HTML, CSS and Java for web development.
+Online image hosting tools to enrich visual content.
+Canva and Visual Studio for design and visual enhancement.
+Overview:
+
+In-depth exploration of the 12 signs of the zodiac.
+Interactive pages with unique information and illustrations for each sign.
+Improved user experience through advanced design and functionality
+
+I hope this project inspires other programming and design enthusiasts to explore new possibilities. The learning journey has been incredible and I look forward to receiving feedback from the community.
+
+
+
+
 link do site: [https://site-signos.vercel.app/index.html](https://app-site-signos-rp2r.vercel.app/index.html)
 
 ![Captura de tela 2023-08-08 143013](https://github.com/GleisonAmorim/Site-Signos/assets/54336609/c8cb52ed-0c90-4f0b-9543-25ef869c916a)
