@@ -92,7 +92,7 @@
     width: 100%;
     z-index: 1; /* Certifique-se de que o footer esteja em um nível superior */
 }
-  }
+  
 
   .footer-links {
   display: flex;
@@ -128,7 +128,27 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     animation: pulse 2s infinite; /* Adiciona a animação de pulsação */
   }
+  .perguntas-button {
+    background-color: #1e13b4;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite; /* Adiciona a animação de pulsação */
+  }
 
+    .perguntas-button:hover {
+    background-color: #c01f62;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  
   @keyframes pulse {
     0%, 100% {
       transform: scale(1);
@@ -190,6 +210,7 @@
   <br></br>
   <div class="buttons-horizontal">
     <a href="combinacao.html" class="combination-button sidebar-link horizontal-button">Jogo das Combinações</a>
+    <a href="perguntas.html" class="perguntas-button sidebar-link horizontal-button">Perguntas e Respostas</a>
   </div>  
 </div> 
 <footer>
