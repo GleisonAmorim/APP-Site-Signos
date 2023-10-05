@@ -3,181 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perguntas e Respostas</title>
-    <font-family: pacifico, cursive; :>
+    <title>Chatbot de Signos</title>
     <style>
     body {
-        font-family: 'Pacifico', cursive; /* Fonte escolhida */
+    font-family: 'Pacifico', cursive; /* Fonte escolhida */
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    background-image: url("https://i.postimg.cc/0jSkXrPg/Apresenta-o-de-Persona-do-Usu-rio-Ilustrada-Preto-Roxo-Neon-Verde-1.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff; /* Cor do texto */
+}
+
+#sidebar {
+    position: fixed;
+    left: 0;
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sidebar h2 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.button-signo {
+    width: 60%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    background-color: #e74c3c;
+    overflow: hidden; /* Prevent text overflow */
+    white-space: nowrap; /* Prevent line breaks */
+    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+}
+/* Estilos para os botões de signos quando hover */
+.button-signo:hover {
+    background-color: #c0392b; /* Cor de destaque ao passar o mouse */
+}
+
+/* Estilos para os botões de signos selecionados */
+.button-signo.selected {
+    background-color: #c0392b; /* Cor de destaque quando selecionado */
+}
+
+/* Cores personalizadas para os botões de signo */
+.button-aries { background-color: #e74c3c; }
+.button-touro { background-color: #f39c12; }
+.button-gemeos { background-color: #d35400; }
+.button-cancer { background-color: #c0392b; }
+.button-leao { background-color: #27ae60; }
+.button-virgem { background-color: #2ecc71; }
+.button-libra { background-color: #3498db; }
+.button-escorpiao { background-color: #9b59b6; }
+.button-sagitario { background-color: #8e44ad; }
+.button-capricornio { background-color: #1abc9c; }
+.button-aquario { background-color: #16a085; }
+.button-peixes { background-color: #3498db; }
+
+#content {
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.9); /* Cor de fundo com transparência */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 1%;
+    max-height: calc(100vh - 20px);
+    display: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#menu select {
+    width: 100%;
+    padding: 10px;
+    
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#verResposta {
+    background-color: #e74c3c; /* Cor do botão "Ver Resposta" */
+    color: #ffffff;
+    border: yes solid;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#resposta {
+    font-family: Arial, Helvetica, sans-serif; /* Change the font here */
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #5e5b5b;
+    border-radius: 5px;
+}
+
+#voltar {
+    background-color: #9b59b6; /* Cor roxa para o botão "Voltar" */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 1px;
+    margin-top: 2px; /* Adicionei um margin-top para controlar a altura */
+    background-color: rgba(241, 241, 241, 0.5);
+    color: #000;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Certifique-se de que o footer esteja em um nível superior */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.footer-links a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    margin: 0 10px;
+    color: #000;
+}
+
+@media screen and (min-width: 100%) {
+    .buttons-horizontal {
         display: flex;
-        min-height: 100vh;
-        margin: 0;
-        justify-content: center; /* Centraliza o conteúdo horizontalmente */
-        align-items: center; /* Centraliza o conteúdo verticalmente */
-        background-image: url("https://i.postimg.cc/0jSkXrPg/Apresenta-o-de-Persona-do-Usu-rio-Ilustrada-Preto-Roxo-Neon-Verde-1.gif");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        color: #ffffff; /* Cor do texto */
-    }
-
-    #sidebar {
-        position: fixed;
-        left: 0;
-        width: 20%;
-        padding: 20px;
-        text-align: center;
-        height: 100%;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        display: none; /* Adicionei essa linha para ocultar a barra lateral em dispositivos móveis */
-    }
-
-    #sidebar h2 {
-        font-family: 'Pacifico', cursive; /* Alterei a fonte para Pacifico Cursive */
-    }
-
-    .button-signo {
-        width: 60%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border: none;
-        border-radius: 5px;
-        padding: 10px;
-        cursor: pointer;
-        font-weight: bold;
-        color: #fff; /* Cor do texto nos botões */
-        background-color: #e74c3c; /* Cor padrão dos botões */
-    }
-
-    /* Estilos para os botões de signos quando hover */
-    .button-signo:hover {
-        background-color: #c0392b; /* Cor de destaque ao passar o mouse */
-    }
-
-    /* Estilos para os botões de signos selecionados */
-    .button-signo.selected {
-        background-color: #c0392b; /* Cor de destaque quando selecionado */
-    }
-
-    /* Cores personalizadas para os botões de signo */
-    .button-aries { background-color: #e74c3c; }
-    .button-touro { background-color: #f39c12; }
-    .button-gemeos { background-color: #d35400; }
-    .button-cancer { background-color: #c0392b; }
-    .button-leao { background-color: #27ae60; }
-    .button-virgem { background-color: #2ecc71; }
-    .button-libra { background-color: #3498db; }
-    .button-escorpiao { background-color: #9b59b6; }
-    .button-sagitario { background-color: #8e44ad; }
-    .button-capricornio { background-color: #1abc9c; }
-    .button-aquario { background-color: #16a085; }
-    .button-peixes { background-color: #3498db; }
-
-    #content {
-        width: 60%;
-        background-color: rgba(0, 0, 0, 0.9); /* Cor de fundo com transparência */
-        padding: 20px;
-        border-radius: 5px;
-        text-align: center;
-        margin-left: 10%;
-        margin-top: 1%;
-        max-height: calc(100vh - 20px);
-        display: center;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #menu select {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        margin-bottom: 10px;
-    }
-
-    #verResposta {
-        background-color: #e74c3c; /* Cor do botão "Ver Resposta" */
-        color: #ffffff;
-        border: yes solid;
-        border-radius: 5px;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    #resposta {
-        font-family: 'Pacifico', cursive; 
-        text-align: center;
+        justify-content: space-between;
+        max-width: 500px; /* Defina o valor desejado aqui */
         margin-top: 20px;
-        padding: 10px; /* Adicionado um padding para a caixa de resposta */
-        border: 1px solid #5e5b5b; /* Adicionado uma borda para a caixa de resposta */
-        border-radius: 5px;
-    }
-
-    #voltar {
-        background-color: #9b59b6; /* Cor roxa para o botão "Voltar" */
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 10px;
-        cursor: pointer;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 2; /* Adicionei um valor maior para que o botão fique acima do conteúdo */
-    }
-
-    footer {
-        text-align: center;
-        padding: 1px;
-        margin-top: 2px; /* Adicionei um margin-top para controlar a altura */
-        background-color: rgba(241, 241, 241, 0.5);
-        color: #000;
-        border-radius: 5px;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1; /* Certifique-se de que o footer esteja em um nível superior */
-    }
-
-    .footer-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .footer-links a {
-        color: #000;
-        text-decoration: none;
-    }
-
-    .footer-links a:hover {
-        text-decoration: underline;
-    }
-
-    .separator {
-        margin: 0 10px;
-        color: #000;
     }
 
     @media screen and (max-width: 768px) {
-        
-        #sidebar {
-            display: show; /* Mostra a barra lateral */
-        }
-        #content {
-            width: 80%; /* Aumenta a largura do conteúdo */
-            margin: 0 auto; /* Centraliza o conteúdo */
-        }
-        h1, h2 {
-            font-family: 'Pacifico', cursive; /* Alterei a fonte para Pacifico Cursive */
-        }
+    .button-signo {
+        width: 100%; /* Adjust button width for mobile */
     }
-    </style>
+}
+</style>
 </head>
 <body>
     <a href="index.html" id="voltar">Voltar</a>
@@ -218,9 +220,9 @@
           <a href="https://drive.google.com/file/d/1zgNLnZVdlBxYTsSKZuJH926G-nWGuZbC/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Baixar App</a>
         </div>
       </footer>
-    </footer>
       
     <script>
+  
         let selectedSignName = ""; // Variável para rastrear o signo selecionado
         const menu = document.getElementById('menu');
         const select = document.getElementById('perguntaSelect');
@@ -257,7 +259,7 @@
         }
 
         const signos = [
-                        {
+            {
         nome: 'Áries',
         perguntas: {
             'O que representa o símbolo de Áries, o carneiro, na astrologia?': 'O carneiro é um símbolo associado ao signo de Áries na astrologia, representando o início da primavera no hemisfério Norte.',
@@ -605,10 +607,6 @@
       </script>
       <script defer src="/_vercel/insights/script.js"></script>
 
-      <script>
-        document.getElementById("voltar").addEventListener("click", function() {
-            window.history.back();
-        });
-        </script>
+
 </body>
 </html>
