@@ -34,11 +34,11 @@
 }
 
 #sidebar h2 {
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: 'Pacifico', cursive;
 }
 
 .button-signo {
-    width: 60%;
+    width: auto; /* Defina a largura para automática para acomodar o texto */
     margin-top: 10px;
     margin-bottom: 10px;
     border: none;
@@ -48,9 +48,10 @@
     font-weight: bold;
     color: #fff;
     background-color: #e74c3c;
-    overflow: hidden; /* Prevent text overflow */
-    white-space: nowrap; /* Prevent line breaks */
-    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
 }
 /* Estilos para os botões de signos quando hover */
 .button-signo:hover {
@@ -59,9 +60,9 @@
 
 /* Estilos para os botões de signos selecionados */
 .button-signo.selected {
-    background-color: #c0392b; /* Cor de destaque quando selecionado */
+    margin-left: 5px;
+    width: auto; /* Defina a largura para automática para acomodar o texto */
 }
-
 /* Cores personalizadas para os botões de signo */
 .button-aries { background-color: #e74c3c; }
 .button-touro { background-color: #f39c12; }
