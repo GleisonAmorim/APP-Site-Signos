@@ -88,3 +88,35 @@ Análise:
 
 02/10/2023 - Separação dos arquivos HTML - JAVA - CSS está em outro repositório
 
+05/10/2023 - Desafio: Criar uma página de perguntas e respostas sobre os signos do zodíaco.
+Ferramentas Utilizadas:
+
+HTML: Para estruturar a página e seus elementos.
+CSS: Para estilizar e dar vida ao design da página.
+JavaScript: Para criar funcionalidades interativas, como a verificação do signo com base na data de nascimento.
+Canva: Para criar elementos gráficos que enriqueceram o design.
+Visual Studio Code: Nosso ambiente de desenvolvimento principal.
+ChatGPT: Para esclarecer dúvidas e obter informações técnicas quando necessário.
+Vercel: Para hospedar o site e torná-lo acessível online.
+Principais Etapas:
+
+Estruturação: Começamos estruturando a página com HTML, definindo seções e elementos para o conteúdo.
+
+Estilo Atraente: Utilizamos CSS para estilizar a página, incluindo cores de fundo, botões, links e um layout responsivo.
+
+Funcionalidade de Verificação: Implementamos JavaScript para verificar o signo com base na data de nascimento fornecida pelo usuário. Isso trouxe uma experiência personalizada para os visitantes.
+
+Design Visual Atraente: Usamos o Canva para criar elementos visuais atrativos, como ícones e botões.
+
+Testes e Ajustes: Testamos a página em diferentes navegadores e dispositivos para garantir que ela funcione bem em todas as situações.
+
+Publicação: Hospedamos o site no Vercel para torná-lo acessível na web.
+
+Compartilhamento: Compartilhamos nosso trabalho com a comunidade e redes sociais, permitindo que mais pessoas explorem o conteúdo.
+
+Resultado: Uma página interativa e informativa sobre os signos do zodíaco, onde os visitantes podem aprender sobre seus signos e explorar combinações.
+
+Foi um trabalho desafiador, mas gratificante, que envolveu várias habilidades e ferramentas para criar uma experiência educativa e divertida para os usuários. Estamos ansiosos para compartilhar essa página com o mundo! 🚀✨
+
+
+![estudo](https://github.com/GleisonAmorim/APP-Site-Signos/assets/54336609/229b4e4f-4fb8-436b-9361-3428c6ba75e6)
