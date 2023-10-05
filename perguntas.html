@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot de Signos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
     body {
     font-family: 'Pacifico', cursive; /* Fonte escolhida */
@@ -164,12 +165,14 @@ footer {
     color: #000;
 }
 
-@media screen and (min-width: 100%) {
-    .buttons-horizontal {
-        display: flex;
-        justify-content: space-between;
-        max-width: 500px; /* Defina o valor desejado aqui */
-        margin-top: 20px;
+@media screen and (max-width: 768px) {
+    /* Estilos para telas de até 768px de largura */
+    #sidebar {
+        display: none; /* Esconde a barra lateral */
+    }
+    #content {
+        width: 80%; /* Aumenta a largura do conteúdo */
+        margin: 0 auto; /* Centraliza o conteúdo */
     }
 }
 </style>
@@ -600,6 +603,10 @@ footer {
       </script>
       <script defer src="/_vercel/insights/script.js"></script>
 
-
+      <script>
+        document.getElementById("voltar").addEventListener("click", function() {
+            window.history.back();
+        });
+        </script>
 </body>
 </html>
