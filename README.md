@@ -121,8 +121,12 @@ Captura de tela 2023-10-06 145242
 - Correção do footer que ficava sob o container de chat
 - Melhoria no visual
 - Correção do botão de voltar
+- Responsividade 100% em celulares
 
-![image](https://github.com/GleisonAmorim/APP-Site-Signos/assets/54336609/24debcb0-a871-41e5-8d12-c36f9992c64c)
+![image](https://github.com/GleisonAmorim/APP-Site-Signos/assets/54336609/6328c2a1-ac20-4bdd-9702-d9bf35cf27cd)
 
+Imagem do meu celular:
+
+![imagem do celular](https://github.com/GleisonAmorim/APP-Site-Signos/assets/54336609/c5830230-1a94-42e8-b128-3cc62991ad51)
 
 
