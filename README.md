@@ -115,3 +115,14 @@ Imagine as possibilidades com esse chatbot:
 
 Captura de tela 2023-10-06 145242
 
+08/10/2023 
+
+- Correções e melhorias no chatbot
+- Correção do footer que ficava sob o container de chat
+- Melhoria no visual
+- Correção do botão de voltar
+
+![image](https://github.com/GleisonAmorim/APP-Site-Signos/assets/54336609/24debcb0-a871-41e5-8d12-c36f9992c64c)
+
+
+
