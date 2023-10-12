@@ -1,28 +1,19 @@
-21/08/2023: Atualização da página inicial para torná-la responsiva e mudança de tema. Remoção do botão "Sorte do Dia" com planos de inseri-lo nas páginas de cada signo. Ainda falta tornar as outras páginas responsivas.
+21/08/2023: Atualização da página inicial para torná-la responsiva e mudança de tema. Remoção do botão "Sorte do Dia," que será posteriormente inserido nas páginas de cada signo. Também foi mencionada a necessidade de tornar responsivas as outras páginas do site.
 
+22/08/2023: Neste dia, todas as páginas do site foram transformadas em responsivas. Foi adicionado um botão "Mensagem Especial" em cada página de signo para sortear mensagens de sorte e motivação. A página "Sobre" foi removida, pois o LinkedIn do autor está no rodapé.
 
-22/08/2023: Todas as páginas foram transformadas em responsivas. Foi adicionado um botão "Mensagem Especial" em cada página de signo para sortear mensagens de sorte e motivação. A página "Sobre" foi removida, já que o LinkedIn está no rodapé.
+23/08/2023: Houve correções, como a adaptação do cabeçalho para dispositivos móveis, para evitar que o h1 sobreposse os botões de gerar mensagem do dia e o botão "Voltar." Além disso, o botão "Jogo das Combinações" foi redesenhado para ser mais atrativo.
 
+23/08/2023: Neste dia, o site foi transformado em um aplicativo usando o WEBSITE 2 APK BUILDER, embora ainda não tenha sido publicado na Play Store. Foi fornecido um link para baixar o aplicativo.
 
-23/08/2023: Correção do cabeçalho para dispositivos móveis e alteração no botão "Jogo das Combinações" para torná-lo mais atraente.
+24/08/2023: Correções importantes foram realizadas no código Java. Os valores eram diferentes para entradas iguais se fossem feitas ao contrário, e isso foi ajustado. Além disso, IDs foram adicionados aos signos, e a escolha de signos iguais foi corrigida, garantindo 100% de compatibilidade.
 
+26/08/2023: A partir deste dia, o autor pôde rastrear o tráfego do site/app. Foi implementado um código em todas as páginas HTML para permitir a visualização do histórico de utilização a partir de 26/08/2023.
 
-23/08/2023: Transformação do site em um aplicativo usando o WEBSITE 2 APK BUILDER, embora ainda não tenha sido publicado na Play Store.
+02/10/2023: Os arquivos HTML, Java e CSS foram separados em outro repositório neste dia.
 
+05/10/2023: Um desafio foi lançado para criar uma página de perguntas e respostas sobre os signos do zodíaco. O desenvolvimento dessa página envolveu várias tecnologias, incluindo HTML, CSS, JavaScript, Canva e Visual Studio Code. O ChatGPT foi utilizado para obter informações técnicas quando necessário.
 
-24/08/2023: Correção do código Java para que ele não dê valores diferentes para entradas iguais se forem feitas ao contrário. Adição de IDs para os signos e correção na escolha de signos iguais.
+06/10/2023: Foi implementado CSS e HTML com perguntas pré-programadas que simulam um ChatBot. Várias possibilidades de uso foram mencionadas, incluindo para lojas online, clínicas, suporte ao cliente e educação.
 
-
-26/08/2023: Implementação de rastreamento de tráfego nas páginas a partir desta data.
-
-
-02/10/2023: Separação dos arquivos HTML, Java e CSS em outro repositório.
-
-
-05/10/2023: Desafio de criar uma página de perguntas e respostas sobre os signos do zodíaco. Utilização de HTML, CSS, JavaScript, Canva e Visual Studio Code, além da assistência do ChatGPT para obter informações técnicas quando necessário.
-
-
-06/10/2023: Implementação de CSS e HTML com perguntas pré-programadas para simular um ChatBot com várias possibilidades de uso.
-
-
-08/10/2023: Correções e melhorias no ChatBot, incluindo correção do footer, melhorias visuais, correção do botão de voltar e tornar o site 100% responsivo em celulares.
+08/10/2023: Correções e melhorias foram realizadas no ChatBot, incluindo correções no footer, aprimoramentos visuais, correção do botão "Voltar" e garantia de responsividade de 100% em dispositivos móveis.
