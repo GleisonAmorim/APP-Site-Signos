@@ -17,3 +17,5 @@
 06/10/2023: Foi implementado CSS e HTML com perguntas pré-programadas que simulam um ChatBot. Várias possibilidades de uso foram mencionadas, incluindo para lojas online, clínicas, suporte ao cliente e educação.
 
 08/10/2023: Correções e melhorias foram realizadas no ChatBot, incluindo correções no footer, aprimoramentos visuais, correção do botão "Voltar" e garantia de responsividade de 100% em dispositivos móveis.
+
+01/11/2023:  Correção de bug, erro no código, excluí "mensagem especial" que ficava escrito atrás do rodapé no canto inferior esquerdo em todas as páginas dos signos.
