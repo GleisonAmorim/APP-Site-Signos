@@ -19,3 +19,7 @@
 08/10/2023: Correções e melhorias foram realizadas no ChatBot, incluindo correções no footer, aprimoramentos visuais, correção do botão "Voltar" e garantia de responsividade de 100% em dispositivos móveis.
 
 01/11/2023:  Correção de bug, erro no código, excluí "mensagem especial" que ficava escrito atrás do rodapé no canto inferior esquerdo em todas as páginas dos signos.
+
+# Em breve
+
+- Criação de um chatbot inteligente para substituir a página de perguntas e respostas
