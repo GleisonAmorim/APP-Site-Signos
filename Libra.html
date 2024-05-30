@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signo de Libra</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .background-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url("https://i.postimg.cc/fLrKCDsd/Frasco-para-viagem-11.gif");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* Background fixo ao rolar a página */
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+
+    h1 {
+      color: #000000;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: #000000;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 150px;
+    }
+
+    .characteristics {
+      margin-top: 20px;
+    }
+
+    .characteristics h2 {
+      color: #000000;
+      margin-bottom: 10px;
+    }
+
+    .characteristics p {
+      margin-bottom: 15px;
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 40px;
+      left: 40px;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #8E44AD;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      z-index: 1;
+    }
+
+    .back-btn .arrow {
+      margin-right: 5px;
+    }
+
+    .back-btn:hover {
+      background-color: #663399;
+    }
+
+   footer {
+   
+    text-align: center;
+    padding: 1px;
+    margin-top: 2px; /* Adicionei um margin-top para controlar a altura */
+    background-color: rgba(241, 241, 241, 0.5);
+    color: #000;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Certifique-se de que o footer esteja em um nível superior */
+}
+  }
+
+  .footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+    .images-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .symbol img,
+    .tattoo img {
+      width: 100%;
+      max-width: 300px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .symbol,
+    .tattoo {
+      width: 100%;
+    }
+    .floating-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #a111b4;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+      font-size: 12px;
+      line-height: 1.2;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+      overflow: hidden;
+    }
+
+    
+
+    .floating-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+    .floating-button:before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 8px;
+      background: linear-gradient(to bottom, #ec0666, #d30516);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.2s ease;
+    }
+
+    /* Estilos para o texto dentro do botão */
+    .button-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    /* Estilos para a mensagem de sorte */
+    .fortune-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 300px;
+      background-color: rgba(207, 11, 214, 0.9);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      display: none;
+    }
+    .floating-button:hover:before {
+      opacity: 1;
+    }
+    .fortune-popup h3 {
+      margin-top: 0;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #999;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-container"></div>
+  <div class="container">
+    <h1>Signo de Libra</h1>
+    <a class="back-btn" href="index.html"><span class="arrow">&#8592;</span></a>
+    <div class="characteristics">
+      <h2>Sobre o signo de Libra:</h2>
+      <p>Libra é o sétimo signo do zodíaco e está associado ao período de 23 de setembro a 22 de outubro. É regido por Vênus e é considerado um signo do elemento Ar, o que o torna sociável, charmoso e equilibrado. Os librianos são conhecidos por sua busca pela harmonia e justiça.</p>
+    </div>
+    <div class="characteristics">
+      <h2>Características principais de Libra:</h2>
+      <ul>
+        <li>Harmonia: Os librianos valorizam a harmonia em suas relações e ambientes.</li>
+        <li>Charme: Eles possuem um charme natural que atrai as pessoas ao seu redor.</li>
+        <li>Equilíbrio: Libra busca o equilíbrio em todas as áreas da vida.</li>
+        <li>Justiça: Eles têm um forte senso de justiça e lutam pela igualdade.</li>
+        <li>Sociabilidade: Os librianos são sociáveis e gostam de interagir com os outros.</li>
+        <li>Diplomacia: Eles são diplomáticos e sabem como resolver conflitos.</li>
+        <li>Estilo: Libra valoriza a estética e possui um senso aguçado de estilo.</li>
+      </ul>
+    </div>
+    <div class="images-container">
+      <div class="symbol">
+        <h2>Símbolo de Libra</h2>
+        <img src="https://static.dicionariodesimbolos.com.br/upload/ee/d5/simbolo-de-libra-1_xl.png
+        " alt="Símbolo de Libra">
+      </div>
+    </div>
+    <div class="images-container">
+      <div class="tattoo">
+        <h2>Ideia para tatuagem de Libra</h2>
+        <img src="https://blog.pajaris.com.br/wp-content/uploads/2021/02/tatuagem-de-libra-1.jpg" alt="Tatuagem de Libra">
+      </div>
+    </div>
+  </div>
+  <button class="floating-button" id="fortuneButton">Mensagem Especial</button>
+  <span class="button-text"></span>
+</button>
+
+<div class="fortune-popup" id="fortunePopup">
+  <span class="close-btn" onclick="closeFortunePopup()">&times;</span>
+  
+
+  <p id="fortuneMessage">Clique no botão para obter uma mensagem especial.</p>
+</div>
+
+<footer>
+  <footer class="footer">
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">Me conheça no LinkedIn</a>
+    <span class="separator">|</span>
+    <a href="https://drive.google.com/file/d/1zgNLnZVdlBxYTsSKZuJH926G-nWGuZbC/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Baixar App</a>
+  </div>
+</footer>
+
+<script>
+  function showFortunePopup() {
+    var popup = document.getElementById("fortunePopup");
+    var message = document.getElementById("fortuneMessage");
+    var randomIndex = Math.floor(Math.random() * messages.length);
+    message.textContent = messages[randomIndex];
+    popup.style.display = "block";
+  }
+
+  function closeFortunePopup() {
+    var popup = document.getElementById("fortunePopup");
+    popup.style.display = "none";
+  }
+
+  var messages = [
+
+  "Seu equilíbrio interior é uma força poderosa. Continue buscando a harmonia em todas as áreas da sua vida e alcançará grandes convidados.",
+"Sua diplomacia é uma virtude única. Use sua capacidade de encontrar soluções pacíficas para inspirar uma mudança positiva no mundo.",
+"Você é um defensor da justiça e da igualdade. Lute por aquilo em que acredita e deixe sua voz ressoar com impacto e inspiração.",
+"Sua empatia é um dom incrível. Use-a para entender os outros e construir conexões significativas que perdurarão ao longo do tempo.",
+"Sua busca por beleza é uma busca pela verdade. Encontre a beleza nas pequenas coisas e inspire outros a apreciarem a magia da vida.",
+"Seu olhar crítico é uma ferramenta valiosa. Use-o para avaliar situações com sabedoria e tomar decisões difíceis, Libra.",
+"Sua paz interior é um tesouro. Cultive-a diariamente e inspire outros a encontrarem a serenidade em meio ao caos.",
+"Sua habilidade de ver todos os lados é uma dádiva. Use-a para mediar conflitos e construir pontes entre pessoas divergentes.",
+"Você é um farol de cooperação. Trabalhe em equipe e inspire colaboração para alcançar metas maiores e mais manifestações.",
+"Sua busca por relacionamentos saudáveis ​​é inspiradora. Demonstre amor, compreensão e conexão genuína onde quer que vá.",
+"Você é um artista da vida. Crie uma vida que seja administradora uma obra-prima, cheia de aventura, amor e criatividade.",
+"Sua intuição é uma guia confiável. Siga sua bússola interna e alcance suas metas com confiança e independência.",
+"Sua capacidade de encontrar a beleza em todos os lugares é único. Compartilhe sua visão e inspire outros a apreciarem a magia do mundo.",
+"Você é um pacificador nato. Use sua influência para acalmar conflitos e promover um ambiente de paz e harmonia.",
+"Sua busca pela verdade é admirável. Continue a explorar e aprofundar seu conhecimento, inspirando outros a fazerem o mesmo.",
+"Sua gentileza é uma luz radiante. Ilumine o caminho dos outros com atos de bondade e compaixão, Libra.",
+"Você é um mestre do equilíbrio. Encontre o meio-termo em todas as situações e inspire outros a fazerem o mesmo.",
+"Sua exaltação é cativante. Use sua presença refinada para inspirar outros a incorporar a beleza em todos os aspectos da vida.",
+"Você é um defensor da paz. Trabalhe incansavelmente por um mundo mais harmonioso e deixe seu legado de positividade.",
+"Sua capacidade de tomar decisões justas é admirável. Use-a para guiar suas escolhas e inspirar outros a agirem com ética.",
+"Você é uma fonte de inspiração para a colaboração. Unir forças com os outros é a chave para alcançar grandes conquistas.",
+"Sua busca pelo amor verdadeiro é inspiradora. Manifeste o amor em todas as suas formas e inspire outros a fazerem o mesmo.",
+"Você é um exemplo de elegância e graça. Deixe sua marca por onde passar, inspirando outros com sua beleza interior e exterior.",
+"Sua capacidade de ver a beleza na imperfeição é única. Compartilhe essa visão e inspire outros a abraçarem sua confiança.",
+"Você é um mediador habilidoso. Use sua sabedoria para resolver conflitos e criar soluções que beneficiem a todos.",
+"Sua busca por justiça é admirável. Lute pelo que é certo e inspire outros a se unirem na causa da igualdade.",
+"Você é um visionário de paz. Mantenha sua visão de um mundo melhor e inspire outros a trabalharem juntos para alcançá-la.",
+"Sua empatia é um farol. Use-a para criar conexões, representações e mostrar aos outros que eles não estão sozinhos.",
+"Você é um conjunto de harmonia. Use sua influência para criar um ambiente de cooperação e inspirar outros a se unirem.",
+"Sua busca por equilíbrio é constante. Mantenha-se firme no seu caminho e inspire outros a encontrarem a estabilidade em suas vidas, Libra.",
+
+
+  ];
+
+var fortuneButton = document.getElementById("fortuneButton");
+fortuneButton.addEventListener("click", showFortunePopup);
+</script>
+
+  <script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+  
+</body>
+</html>

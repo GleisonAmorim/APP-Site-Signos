@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signos e Sorte</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://i.postimg.cc/0jSkXrPg/Apresenta-o-de-Persona-do-Usu-rio-Ilustrada-Preto-Roxo-Neon-Verde-1.gif");
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .header {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    color: #fff;
+    padding: 10px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 70px;
+  }
+
+  .verify-container {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .verify-button {
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .verify-button:hover {
+    transform: scale(1.05);
+  }
+
+  .signs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .sidebar-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+  }
+
+  .sidebar-link:hover {
+    transform: translateX(5px);
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(241, 241, 241, 0.5);
+    color: #000;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .footer-links a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  .combination-button {
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+  }
+
+  .perguntas-button {
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+  }
+
+  .perguntas-button:hover, .combination-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  @media screen and (min-width: 100%) {
+    .buttons-horizontal {
+      display: flex;
+      justify-content: space-between;
+      max-width: 500px;
+      margin-top: 20px;
+    }
+
+    .horizontal-button {
+      flex: 1;
+      margin: 0 5px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="header">Site dos Signos</div>
+<div class="container">
+  <div class="verify-container">
+    <h2 style="color: #2fda29; font-weight: bold;">Não sabe qual é seu signo?</h2>
+    <p>Informe sua data de nascimento:</p>
+    <input type="date" id="birthdate" class="form-control">
+    <button class="btn btn-danger verify-button" onclick="verifySign()">Verificar</button>
+    <br></br>
+    <div class="balloon text-center" id="signBalloon"></div>
+  </div>
+   <div class="signs-container">
+    <a href="aries.html" class="btn btn-danger sidebar-link" style="background-color: #e74c3c;">Áries</a>
+    <a href="touro.html" class="btn btn-warning sidebar-link" style="background-color: #f39c12;">Touro</a>
+    <a href="Gemeos.html" class="btn btn-warning sidebar-link" style="background-color: #d35400;">Gêmeos</a>
+    <a href="Cancer.html" class="btn btn-danger sidebar-link" style="background-color: #c0392b;">Câncer</a>
+    <a href="Leo.html" class="btn btn-success sidebar-link" style="background-color: #27ae60;">Leão</a>
+    <a href="virgem.html" class="btn btn-success sidebar-link" style="background-color: #2ecc71;">Virgem</a>
+    <a href="Libra.html" class="btn btn-primary sidebar-link" style="background-color: #3498db;">Libra</a>
+    <a href="Escorpiao.html" class="btn btn-primary sidebar-link" style="background-color: #9b59b6;">Escorpião</a>
+    <a href="Sagitario.html" class="btn btn-primary sidebar-link" style="background-color: #8e44ad;">Sagitário</a>
+    <a href="Capricornio.html" class="btn btn-info sidebar-link" style="background-color: #1abc9c;">Capricórnio</a>
+    <a href="Aquario.html" class="btn btn-info sidebar-link" style="background-color: #16a085;">Aquário</a>
+    <a href="Peixes.html" class="btn btn-info sidebar-link" style="background-color: #3498db;">Peixes</a>
+   </div>
+  <br><br>
+  <div class="buttons-horizontal">
+    <a href="combinacao.html" class="btn btn-primary combination-button sidebar-link horizontal-button">Jogo das Combinações</a>
+  </div>
+</div> 
+<footer class="footer">
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/gleisonamorim/" target="_blank">Me conheça no LinkedIn</a>
+    <span class="separator">|</span>
+    <a href="https://drive.google.com/file/d/1zgNLnZVdlBxYTsSKZuJH926G-nWGuZbC/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Baixar App</a>
+  </div>
+</footer>
+
+<script>
+function verifySign() {
+  var birthdate = new Date(document.getElementById("birthdate").value);
+  var month = birthdate.getMonth() + 1;
+  var day = birthdate.getDate();
+  var sign = "";
+
+  if ((month == 3 && day >= 21) || (month == 4 && day <= 20)) {
+    sign = "Áries: de 21 de março a 20 de abril";
+  } else if ((month == 4 && day >= 21) || (month == 5 && day <= 20)) {
+    sign = "Touro: de 21 de abril a 20 de maio";
+  } else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
+    sign = "Gêmeos: de 21 de maio a 20 de junho";
+  } else if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) {
+    sign = "Câncer: de 21 de junho a 22 de julho";
+  } else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
+    sign = "Leão: de 23 de julho a 22 de agosto";
+  } else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
+    sign = "Virgem: de 23 de agosto a 22 de setembro";
+  } else if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) {
+    sign = "Libra: de 23 de setembro a 22 de outubro";
+  } else if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) {
+    sign = "Escorpião: de 23 de outubro a 21 de novembro";
+  } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
+    sign = "Sagitário: de 22 de novembro a 21 de dezembro";
+  } else if ((month == 12 && day >= 22) || (month == 1 && day <= 20)) {
+    sign = "Capricórnio: de 22 de dezembro a 20 de janeiro";
+  } else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {
+    sign = "Aquário: de 21 de janeiro a 18 de fevereiro";
+  } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
+    sign = "Peixes: de 19 de fevereiro a 20 de março";
+  }
+
+  var balloon = document.getElementById("signBalloon");
+  balloon.innerText = sign;
+  balloon.classList.add("show");
+  setTimeout(function() {
+    balloon.classList.remove("show");
+  }, 5000);
+}
+</script>
+</body>
+</html>
